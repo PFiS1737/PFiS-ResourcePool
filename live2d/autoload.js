@@ -1,5 +1,5 @@
 // 注意：live2d_path 参数应使用绝对路径
-const live2d_path = "https://cdn.jsdelivr.net/gh/PFiS1737/PFiS-ResourcePool@latest/live2d/";
+const live2d_path = "https://cdn.jsdelivr.net/gh/PFiS1737/PFiS-ResourcePool@v0.1/live2d/";
 //const live2d_path = "/lib/waifu/";
 
 // 封装异步加载资源的方法
