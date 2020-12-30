@@ -1,2 +1,7 @@
-# PFiS的公开资源库
-这里会分享所有[我的博客](http://pfis.infinityfreeapp.com/)中用到的媒体和其他CDN资源，我会使用[jsDelivr](https://www.jsdelivr.com)将其引入网站中。
+# Public Repository
+PFiS的公共资源库
+为[我的博客](http://pfis.infinityfreeapp.com/)提供CDN静态资源支援。<br />
+基本用法：
+```
+https://cdn.jsdelivr.net/gh/user/repo@version/file
+```
