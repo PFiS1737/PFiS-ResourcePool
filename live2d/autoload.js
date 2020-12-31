@@ -1,5 +1,5 @@
 // 注意：live2d_path 参数应使用绝对路径
-const live2d_path = "https://cdn.jsdelivr.net/gh/PFiS1737/PFiS-ResourcePool@latest/live2d/";
+const live2d_path = "https://cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/";
 //const live2d_path = "http://pfis.infinityfreeapp.com/wp-content/live2d/";
 //const live2d_path = "/lib/waifu/";
 
