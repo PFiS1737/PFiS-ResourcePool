@@ -1,7 +1,8 @@
 // 注意：live2d_path 参数应使用绝对路径
 const live2d_path = "https://cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/";
 //const live2d_path = "http://pfis.infinityfreeapp.com/wp-content/live2d/";
-//const live2d_path = "/lib/waifu/";
+//const live2d_path = "https://zhangshuqiao.org/lib/waifu/";
+//const live2d_path = "/live2d-widget/";
 
 // 封装异步加载资源的方法
 function loadExternalResource(url, type) {
@@ -34,7 +35,8 @@ if (screen.width >= 768) {
 	]).then(() => {
 		initWidget({
 			waifuPath: live2d_path + "waifu-tips.json",
-			apiPath: "https://api.zsq.im/live2d", // https://live2d.fghrsh.net/api
+			apiPath: "https://api.zsq.im/live2d",
+			//apiPath: "https://live2d.fghrsh.net/api/",
 			//cdnPath: "https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/"
 		});
 	});
