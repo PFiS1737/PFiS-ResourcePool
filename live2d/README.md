@@ -19,7 +19,7 @@ Else API from [米米的博客](https://zhangshuqiao.org).<br />
     - 根据autoload.js文件中的注释进行修改即可（约1-5行），使用``//``注释掉已有代码。
 2. 更换apiPath或cdnPath
     - 根据autoload.js文件中的注释，释放已有apiPath或cdnPath(只能其一)即可（约38-40行），或添加自行搭建的API。
-        - 
+    
 ## waifu-tips.js
 - 
 - 
