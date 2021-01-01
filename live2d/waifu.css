@@ -30,7 +30,8 @@
 	position: fixed;
 	transform: translateY(3px);
 	transition: transform .3s ease-in-out, bottom 3s ease-in-out;
-	z-index: 1;
+	/* z-index: 1; */
+	z-index: 1000 !important;
 }
 
 #waifu:hover {
@@ -109,10 +110,6 @@
 #waifu-tool span:hover {
 	color: #0684bd;
 	/* color: #34495e; */
-}
-
-#waifu {
-  z-index: 1000 !important;
 }
 
 @keyframes shake {
