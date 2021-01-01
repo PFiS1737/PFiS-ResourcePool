@@ -1,6 +1,7 @@
 /*
  * Live2D Widget
- * https://github.com/stevenjoezhang/live2d-widget
+ * Original From https://github.com/stevenjoezhang/live2d-widget
+ * https://github.com/PFiS1737/PFiS_Public_Repository/tree/main/live2d
  */
 
 function loadWidget(config) {
@@ -77,7 +78,7 @@ function loadWidget(config) {
 			Live2D.captureFrame = true;
 		});
 		document.querySelector("#waifu-tool .fa-info-circle").addEventListener("click", () => {
-			//open("https://github.com/stevenjoezhang/live2d-widget");
+			// open("https://github.com/stevenjoezhang/live2d-widget");
 			open("https://github.com/PFiS1737/PFiS_Public_Repository/tree/main/live2d");
 		});
 		document.querySelector("#waifu-tool .fa-times").addEventListener("click", () => {
@@ -163,6 +164,7 @@ function loadWidget(config) {
 			modelTexturesId = localStorage.getItem("modelTexturesId");
 		if (modelId === null) {
 			// 首次访问加时载 指定模型 的 指定材质
+			// 还有几个比较涩的，能不能找着看运气，推荐将下面的切换顺序改为"switch"
 			modelId = 2; // 模型 ID
 			modelTexturesId = 39; // 材质 ID
 		}
