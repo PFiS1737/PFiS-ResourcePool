@@ -12,7 +12,7 @@ Else API from [米米的博客](https://zhangshuqiao.org).<br />
 ```
 示例网站：[demo.html](http://pfis.infinityfreeapp.com/live2d_widget_demo.html)
 # 开发建议及常见问题
-打开文件以查看更多注释
+- 打开文件以查看更多注释
 ## autoload.js
 ## waifu-tips.js
 ## waifu.css
