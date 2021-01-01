@@ -3,11 +3,11 @@ Copy from [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2
 Else API from [米米的博客](https://zhangshuqiao.org).<br />
 基本用法：``https://cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/file``<br />
 在网站中添加：
-```JavaScript
+```html
 <script src="https://cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/autoload.js"></script>
 ```
 依赖Font Awesome：在``<head>``中添加
-```JavaScript
+```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
 ```
 示例网站：[demo.html](http://pfis.infinityfreeapp.com/live2d_widget_demo.html)
