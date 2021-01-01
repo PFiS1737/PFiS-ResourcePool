@@ -6,7 +6,6 @@
 	cursor: pointer;
 	font-size: 12px;
 	left: 0;
-	/* right: 0; */
 	margin-left: -100px;
 	padding: 5px 2px 5px 5px;
 	position: fixed;
@@ -107,7 +106,12 @@
 }
 
 #waifu-tool span:hover {
-	color: #0684bd; /* #34495e */
+	color: #0684bd;
+	/* color: #34495e; */
+}
+
+#waifu {
+  z-index: 1000 !important;
 }
 
 @keyframes shake {
