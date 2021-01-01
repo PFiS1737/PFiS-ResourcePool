@@ -1,6 +1,6 @@
 /*
  * Live2D Widget
- * Original From https://github.com/stevenjoezhang/live2d-widget
+ * Original from https://github.com/stevenjoezhang/live2d-widget
  * https://github.com/PFiS1737/PFiS_Public_Repository/tree/main/live2d
  */
 
