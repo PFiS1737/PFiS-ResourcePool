@@ -14,7 +14,8 @@ Else API from [米米的博客](https://zhangshuqiao.org).<br />
 # 开发建议及常见问题
 打开文件以查看更多注释
 ## autoload.js
-- 
+- 设置live2d_path参数的路径
+ - 根据autoload.js文件中的指导进行修改即可，使用``//``注释掉已有代码。
 - 
 - 
 ## waifu-tips.js
