@@ -13,15 +13,22 @@ Else API from [米米的博客](https://zhangshuqiao.org).<br />
 示例网站：[demo.html](http://pfis.infinityfreeapp.com/live2d_widget_demo.html)
 # 开发建议及常见问题
 打开文件以查看更多注释，本文更多的是给像我这样的萌新看的。
+引用[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的话：
+> ## 目录结构  
+> - ``waifu-tips.js``包含了按钮和对话框的逻辑；  
+> - ``waifu-tips.json``中定义了触发条件（``selector``，CSS选择器）和触发时显示的文字（``text``）；  
+> - ``waifu.css``是看板娘的样式表。  
+> 源文件是对Hexo的[NexT主题](http://github.com/next-theme/hexo-theme-next)有效的，为了适用于你自己的网页，可能需要自行修改，或增加新内容。  
+> 警告：作者不对包括但不限于``waifu-tips.js``和``waifu-tips.json``文件中的内容负责，请自行确保它们是合适的。  
 ## autoload.js
 ### 建议
-1. 设置live2d_path参数的路径
-    - 根据autoload.js文件中的注释和已有代码进行修改即可（文件中约1-5行处），建议使用``//``注释掉已有代码。
+1. 设置``live2d_path``参数的路径
+    - 根据``autoload.js``文件中的注释和已有代码进行修改即可（文件中约1-5行处），建议使用``//``注释掉已有代码。
     - 路径链接后面必须加``/``。
 2. 修改最低显示宽度
-    - 根据autoload.js文件中的注释和已有代码修改``screen.width >= 768``中的``768``即可（文件中约30行处）。
+    - 根据``autoload.js``文件中的注释和已有代码修改``screen.width >= 768``中的``768``即可（文件中约30行处）。
 3. 更换API
-    - 根据autoload.js文件中的注释和已有代码，释放已有apiPath或cdnPath(只能其一)，并注释掉多余的API即可（文件中约38-40行处），或添加自行搭建的API。
+    - 根据``autoload.js``文件中的注释和已有代码，释放已有apiPath或cdnPath(只能其一)，并注释掉多余的API即可（文件中约38-40行处），或添加自行搭建的API。
 ### 问题
 1. 我如何搭建API？
     - 可参照[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)和[fghrsh的文章](https://www.fghrsh.net/post/170.html)。
@@ -29,8 +36,8 @@ Else API from [米米的博客](https://zhangshuqiao.org).<br />
     > 替换autoload.js里的API链接为``http[s]://网站域名/API所在目录/``  
 2. autoload.js文件中已有的apiPath和cdnPath有什么区别？
     - ``https://live2d.fghrsh.net/api/``是[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中附带的[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)的API。共有7个模型，有大量材质，速度较快。不足的是1和7模型在显示时与屏幕下边缘存在较大缝隙。
-    - ``https://api.zsq.im/live2d/``来自[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中提到的[米米的博客](https://zhangshuqiao.org)的[custom.js](https://zhangshuqiao.org/lib/custom.js)文件（别忘我是这么找着的，问就是扒网站源代码）。在修复了上面那个API中的问题的同时，又添加了数十个新模型。可速度却大大降低。
     - ``https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/``是[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中默认的API，使用[jsDelivr](cdn.jsdelivr.net)引用[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)中的文件而搭建成的API，受[jsDelivr](cdn.jsdelivr.net)缓存影响较大。
+    - ``https://api.zsq.im/live2d/``来自[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中提到的[米米的博客](https://zhangshuqiao.org)的[custom.js](https://zhangshuqiao.org/lib/custom.js)文件（别问我是这么找着的，问就是扒网站源代码）。在修复了上面第一个API中的问题的同时，又添加了数十个新模型。可速度却大大降低。
 3. 我的手机不能显示看板娘，我要怎么办？
     - 参见上文中建议2-修改最低显示宽度。
 ## waifu-tips.js
@@ -46,17 +53,25 @@ Else API from [米米的博客](https://zhangshuqiao.org).<br />
     - 根据waifu-tips.js文件中的注释和已有代码，修改``switch_textures``中的``switch``即可（文件中约235-236行处）。
 ## waifu.css
 ### 建议
-1. 
+1. 将看板娘在网页右边加载
     - 
-2. 
+2. 修改工具栏及对话框颜色
     - 
-3. 
+3. 修改看板娘出场方向（上/下）
     - 
 4. 
     - 
 ## waifu-tips.json
-根据自己网站的需要进行修改，
+- 根据自己网站的需要进行修改。
+- 目前，此文件相对[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的源文件没有进行修改。
 # 其他问题
+1. 为什么我的看板娘不加载工具栏？
+    - 请确保该网页已加载Font Awesome v4或v5。
+2. 为什么我的看板娘不加载模型和材质？
+    - 请确保您搭建的API正常运行，如果使用的是别人的，请联系API拥有者。
 # 更多内容请参见
-[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)
-[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)
+- [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)及其[Issues](https://github.com/stevenjoezhang/live2d-widget/issues?q=is%3Aissue+is%3Aclosed)
+- [fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)
+- [fghrsh的文章-网页添加Live2D看板娘](https://www.fghrsh.net/post/123.html)
+- [fghrsh的文章-Live2D 看板娘 API 迁移公告](https://www.fghrsh.net/post/170.html)
+- [stevenjoezhang的文章-在网页中添加Live2D看板娘](https://zhangshuqiao.org/2018-07/在网页中添加Live2D看板娘/)
