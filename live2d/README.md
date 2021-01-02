@@ -14,7 +14,6 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 # 开发建议及常见问题
 打开文件以查看更多注释，本文更多的是给像我这样的萌新看的。
 引用[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的话：
->  ## 目录结构  
 > - ``waifu-tips.js``包含了按钮和对话框的逻辑；  
 > - ``waifu-tips.json``中定义了触发条件（``selector``，CSS选择器）和触发时显示的文字（``text``）；  
 > - ``waifu.css``是看板娘的样式表。  
@@ -28,12 +27,16 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 2. 修改最低显示宽度
     - 根据``autoload.js``文件中的注释和已有代码修改``screen.width >= 768``中的``768``即可（文件中约30行处）。
 3. 更换API
-    - 根据``autoload.js``文件中的注释和已有代码，释放已有apiPath或cdnPath(只能其一)，并注释掉多余的API即可（文件中约38-40行处），或添加自行搭建的API。
+    - 根据``autoload.js``文件中的注释和已有代码，释放已有``apiPath``或``cdnPath``(只能其一)，并注释掉多余的API即可（文件中约38-40行处），或添加自行搭建的API。
+    - 引用[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的话：
+    > ``initWidget``方法接受名为``apiPath``和``cdnPath``的参数，两者设置其中一项即可。  
+    > 其中``apiPath``为后端API的URL，可以自行搭建，并增加模型（需要修改的内容比较多，此处不再赘述）。  
+    > 而``cdnPath``则是通过[jsDelivr](cdn.jsdelivr.net)这样的CDN服务加载资源，更加稳定。  
 ### 问题
 1. 我如何搭建API？
     - 可参照[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)和[fghrsh的文章](https://www.fghrsh.net/post/170.html)。
     > 从[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)下载源码并放到网站目录  
-    > 替换autoload.js里的API链接为``http[s]://网站域名/API所在目录/``  
+    > 替换``autoload.js``里的API链接为``http[s]://网站域名/API所在目录/``  
 2. autoload.js文件中已有的apiPath和cdnPath有什么区别？
     - ``https://live2d.fghrsh.net/api/``是[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中附带的[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)的API。共有7个模型，有大量材质，速度较快。不足的是1和7模型在显示时与屏幕下边缘存在较大缝隙。
     - ``https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/``是[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中默认的API，使用[jsDelivr](cdn.jsdelivr.net)引用[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)中的文件而搭建成的API，受[jsDelivr](cdn.jsdelivr.net)缓存影响较大。
@@ -43,14 +46,14 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 ## waifu-tips.js
 ### 建议
 1. 修改对话内容
-    - 所有汉字都能随便改。
+    - 所有汉字均能随意修改。
     - 不要试图在``showMessage()``中添加新的字段来随机输出，不过``messageArray = []``可以。
 2. 修改工具栏中关于页转跳链接
-    - 根据waifu-tips.js文件中的注释和已有代码进行修改即可（文件中约81-82行处）。
+    - 根据``waifu-tips.js``文件中的注释和已有代码进行修改即可（文件中约81-82行处）。
 3. 修改首次访问时加载的模型及材质
-    - 根据waifu-tips.js文件中的注释和已有代码进行修改即可（文件中约166-169行处）。
+    - 根据``waifu-tips.js``文件中的注释和已有代码进行修改即可（文件中约166-169行处）。
 4. 修改材质变换方式
-    - 根据waifu-tips.js文件中的注释和已有代码，修改``switch_textures``中的``switch``即可（文件中约235-236行处）。
+    - 根据``waifu-tips.js``文件中的注释和已有代码，修改``switch_textures``中的``switch``即可（文件中约235-236行处）。
 ## waifu.css
 ### 建议
 1. 将看板娘在网页右边加载
@@ -75,6 +78,7 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 # 更多内容请参见
 - [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)及其[Issues](https://github.com/stevenjoezhang/live2d-widget/issues?q=is%3Aissue+is%3Aclosed)
 - [fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)
+- [fghrsh/live2d_demo](https://github.com/fghrsh/live2d_demo)
 - [fghrsh的文章-网页添加Live2D看板娘](https://www.fghrsh.net/post/123.html)
 - [fghrsh的文章-Live2D 看板娘 API 迁移公告](https://www.fghrsh.net/post/170.html)
 - [stevenjoezhang的文章-在网页中添加Live2D看板娘](https://zhangshuqiao.org/2018-07/在网页中添加Live2D看板娘/)
