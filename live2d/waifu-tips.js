@@ -163,8 +163,7 @@ function loadWidget(config) {
 		let modelId = localStorage.getItem("modelId"),
 			modelTexturesId = localStorage.getItem("modelTexturesId");
 		if (modelId === null) {
-			// 首次访问加时载 指定模型 的 指定材质
-			// 还有几个比较涩的，能不能找着看运气，推荐将下面的切换顺序改为"switch"
+			// 首次访问时加载 指定模型 的 指定材质
 			modelId = 2; // 模型 ID
 			modelTexturesId = 39; // 材质 ID
 		}
