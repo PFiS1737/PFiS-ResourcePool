@@ -12,6 +12,7 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 ```
 示例网站：[demo.html](http://pfis.infinityfreeapp.com/live2d_widget_demo.html)
 # 开发建议及常见问题
+## 初级
 打开文件以查看更多注释，本文更多的是给像我这样的萌新看的。
 引用[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的话：
 > - ``waifu-tips.js``包含了按钮和对话框的逻辑；  
@@ -19,8 +20,8 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 > - ``waifu.css``是看板娘的样式表。  
 > - 源文件是对Hexo的[NexT主题](http://github.com/next-theme/hexo-theme-next)有效的，为了适用于你自己的网页，可能需要自行修改，或增加新内容。  
 > - 警告：作者不对包括但不限于``waifu-tips.js``和``waifu-tips.json``文件中的内容负责，请自行确保它们是合适的。  
-## autoload.js
-### 建议
+### autoload.js
+#### 建议
 1. 设置``live2d_path``参数的路径
     - 根据``autoload.js``文件中的注释和已有代码进行修改即可（文件中约1-5行处），建议使用``//``注释掉已有代码。
     - 路径链接后面必须加``/``。
@@ -32,7 +33,7 @@ Else API from [米米的博客](https://zhangshuqiao.org).
     > - ``initWidget``方法接受名为``apiPath``和``cdnPath``的参数，两者设置其中一项即可。  
     > - 其中``apiPath``为后端API的URL，可以自行搭建，并增加模型（需要修改的内容比较多，此处不再赘述）。  
     > - 而``cdnPath``则是通过[jsDelivr](cdn.jsdelivr.net)这样的CDN服务加载资源，更加稳定。  
-### 问题
+#### 问题
 1. 我如何搭建API？
     - 可参照[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)和[fghrsh的文章](https://www.fghrsh.net/post/170.html)。
     > - 从[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)下载源码并放到网站目录  
@@ -43,8 +44,8 @@ Else API from [米米的博客](https://zhangshuqiao.org).
     - ``https://api.zsq.im/live2d/``来自[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中提到的[米米的博客](https://zhangshuqiao.org)的[custom.js](https://zhangshuqiao.org/lib/custom.js)文件（别问我是这么找着的，问就是扒网站源代码）。在修复了上面第一个API中的问题的同时，又添加了数十个新模型。可速度却大大降低。
 3. 我的手机不能显示看板娘，我要怎么办？
     - 参见上文中建议2-修改最低显示宽度。
-## waifu-tips.js
-### 建议
+### waifu-tips.js
+#### 建议
 1. 修改对话内容
     - 所有汉字均能随意修改。
     - 不要试图在``showMessage()``中添加新的字段来随机输出，不过``messageArray = []``可以。
@@ -54,20 +55,25 @@ Else API from [米米的博客](https://zhangshuqiao.org).
     - 根据``waifu-tips.js``文件中的注释和已有代码进行修改即可（文件中约166-169行处）。
 4. 修改材质变换方式
     - 根据``waifu-tips.js``文件中的注释和已有代码，修改``switch_textures``中的``switch``即可（文件中约235-236行处）。
-## waifu.css
-### 建议
+### waifu.css
+#### 建议
 1. 将看板娘在网页右边加载
-    - 根据``waifu.css``文件中的注释和已有代码，注释掉``#waifu {}``中的``left: 0;``，并释放``/* right: 0; */``（文件中约26-37行处）；注释掉``#waifu-tool {}``中的``right: -10px;``，并释放``/* left: 10px; */``（文件中约86-95行处）。
-2. 修改工具栏及对话框颜色
+    - 根据``waifu.css``文件中的注释和已有代码
+        1.注释掉``#waifu {}``中的``left: 0;``，并释放``/* right: 0; */``（文件中约26-37行处）；
+        2.注释掉``#waifu-tool {}``中的``right: -10px;``，并释放``/* left: 10px; */``或``right: 10px;``（文件中约86-95行处）。
+2. 修改工具栏颜色
     - 
 3. 修改看板娘出场方向（上/下）
     - 
-4. 
+4. 无论如何不显示对话框
     - 
-### 问题
+#### 问题
 1. 我的看板娘已在网页中成功加载，但是我为什么看不见？
     - 根据``waifu.css``文件中的注释和已有代码，调大``#waifu {}``中的``z-index``属性，并添加``!important``，目前已调整为``1000``。
-## waifu-tips.json
+2. 上文中建议1中第2步中的“释放``/* left: 10px; */``或``/* right: 10px; */``”有什么区别？
+    - 释放``/* left: 10px; */``可以使工具栏在模型的左边。
+    - 释放``/* right: 10px; */``可以使工具栏在模型的右边且不会超出屏幕边界。
+### waifu-tips.json
 - 根据自己网站的需要进行修改。
 - 目前，此文件相对[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的源文件没有进行修改。
 # 其他问题
