@@ -57,8 +57,8 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 ## waifu.css
 ### 建议
 1. 将看板娘在网页右边加载
-    - 注释掉``#waifu {}``中的``left: 0;``，并释放``/* right: 0; */``（文件中约26-37行处）；
-    - 注释掉``#waifu-tool {}``中的``right: -10px;``，并释放``/* left: 10px; */``或``right: 10px;``（文件中约86-95行处）；
+    - 注释掉``#waifu {}``中的``left: 0;``，并释放``/* right: 0; */``；
+    - 注释掉``#waifu-tool {}``中的``right: -10px;``，并释放``/* left: 10px; */``或``right: 10px;``；
     - 注释掉``#waifu-toggle {}``中的``left: 0;``，并释放``/* right: 0; */``；
     - 注释掉``#waifu-toggle {}``中的``margin-left: -100px;``，并释放``/* margin-right: -100px; */``；
     - 注释掉``#waifu-toggle {}``中的``transition: margin-left 1s;``，并释放``/* transition: margin-right 1s; */``；
