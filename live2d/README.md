@@ -58,9 +58,23 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 ### 建议
 1. 将看板娘在网页右边加载
     - 方法一：引用新的CSS进行覆盖
-    > 
-    > 
-    > 
+    > - 在``waifu.css``文件中添加以下字段：
+    > ```CSS
+    #waifu-toggle {
+        right: 0 !important;
+        margin-right: -100px !important;
+        transition: margin-right 1s !important;
+        writing-mode: vertical-lr !important;
+    }
+    
+    #waifu-toggle.waifu-toggle-active {
+        margin-right: -40px !important;
+    }
+    
+    #waifu-toggle.waifu-toggle-active:hover {
+        margin-right: -20px !important;
+    }
+    ```
     - 方法二：直接修改
     > - 注释掉``#waifu {}``中的``left: 0;``，并释放``/* right: 0; */``；
     > - 注释掉``#waifu-tool {}``中的``right: -10px;``，并释放``/* left: 10px; */``或``right: 10px;``；
