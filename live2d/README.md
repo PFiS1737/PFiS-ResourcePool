@@ -17,8 +17,8 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 > - ``waifu-tips.js``包含了按钮和对话框的逻辑；  
 > - ``waifu-tips.json``中定义了触发条件（``selector``，CSS选择器）和触发时显示的文字（``text``）；  
 > - ``waifu.css``是看板娘的样式表。  
-> 源文件是对Hexo的[NexT主题](http://github.com/next-theme/hexo-theme-next)有效的，为了适用于你自己的网页，可能需要自行修改，或增加新内容。  
-> 警告：作者不对包括但不限于``waifu-tips.js``和``waifu-tips.json``文件中的内容负责，请自行确保它们是合适的。  
+> - 源文件是对Hexo的[NexT主题](http://github.com/next-theme/hexo-theme-next)有效的，为了适用于你自己的网页，可能需要自行修改，或增加新内容。  
+> - 警告：作者不对包括但不限于``waifu-tips.js``和``waifu-tips.json``文件中的内容负责，请自行确保它们是合适的。  
 ## autoload.js
 ### 建议
 1. 设置``live2d_path``参数的路径
@@ -57,13 +57,16 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 ## waifu.css
 ### 建议
 1. 将看板娘在网页右边加载
-    - 啊这
+    - 根据``waifu.css``文件中的注释和已有代码，注释掉``#waifu {}``中的``left: 0;``，并释放``/* right: 0; */``（文件中约26-37行处）；注释掉``#waifu-tool {}``中的``right: -10px;``，并释放``/* left: 10px; */``（文件中约86-95行处）。
 2. 修改工具栏及对话框颜色
     - 
 3. 修改看板娘出场方向（上/下）
     - 
 4. 
     - 
+### 问题
+1. 我的看板娘已在网页中成功加载，但是我为什么看不见？
+    - 根据``waifu.css``文件中的注释和已有代码，调大``#waifu {}``中的``z-index``属性，并添加``!important``，目前已调整为``1000``。
 ## waifu-tips.json
 - 根据自己网站的需要进行修改。
 - 目前，此文件相对[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的源文件没有进行修改。
