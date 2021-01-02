@@ -21,10 +21,12 @@
 
 #waifu-toggle.waifu-toggle-active {
 	margin-left: -50px;
+	/* margin-right: -40px; */
 }
 
 #waifu-toggle.waifu-toggle-active:hover {
 	margin-left: -30px;
+	/* margin-right: -20px; */
 }
 
 /* 看板娘主体 */
