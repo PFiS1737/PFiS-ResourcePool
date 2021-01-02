@@ -1,5 +1,5 @@
 # 信息
-Copy from [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget),[米米的博客](https://zhangshuqiao.org).<br />
+Copy from [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget), [米米的博客](https://zhangshuqiao.org).<br />
 Else API from [米米的博客](https://zhangshuqiao.org).<br />
 基本用法：``https://cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/file``<br />
 在网站中添加：
@@ -69,6 +69,9 @@ Else API from [米米的博客](https://zhangshuqiao.org).<br />
     - 请确保该网页已加载Font Awesome v4或v5。
 2. 为什么我的看板娘不加载模型和材质？
     - 请确保您搭建的API正常运行，如果使用的是别人的，请联系API拥有者。
+3. 我怎么才能清除[jsDelivr](cdn.jsdelivr.net)的缓存？
+    - 在原先的url中，将``https://cdn.jsdelivr.net/...``替换为``https://purge.jsdelivr.net/...``即可。
+    - 在测试中，最好调用min版本，可做到实时刷新。
 # 更多内容请参见
 - [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)及其[Issues](https://github.com/stevenjoezhang/live2d-widget/issues?q=is%3Aissue+is%3Aclosed)
 - [fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)
