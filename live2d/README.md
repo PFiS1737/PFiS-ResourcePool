@@ -22,12 +22,12 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 ## autoload.js
 ### 建议
 1. 设置``live2d_path``参数的路径
-    - 根据``autoload.js``文件中的注释和已有代码进行修改即可（文件中约1-5行处），建议使用``//``注释掉已有代码。
+    - 根据``autoload.js``文件中的注释和已有代码进行修改即可，建议使用``//``注释掉已有代码。
     - 路径链接后面必须加``/``。
 2. 修改最低显示宽度
-    - 根据``autoload.js``文件中的注释和已有代码修改``screen.width >= 768``中的``768``即可（文件中约30行处）。
+    - 根据``autoload.js``文件中的注释和已有代码修改``screen.width >= 768``中的``768``即可。
 3. 更换API
-    - 根据``autoload.js``文件中的注释和已有代码，释放已有``apiPath``或``cdnPath``，并注释掉多余的API即可（文件中约38-40行处），或添加自行搭建的API。
+    - 根据``autoload.js``文件中的注释和已有代码，释放已有``apiPath``或``cdnPath``，并注释掉多余的API即可，或添加自行搭建的API。
     - 引用[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的话：
     > - ``initWidget``方法接受名为``apiPath``和``cdnPath``的参数，两者设置其中一项即可。  
     > - 其中``apiPath``为后端API的URL，可以自行搭建，并增加模型（需要修改的内容比较多，此处不再赘述）。  
@@ -49,11 +49,11 @@ Else API from [米米的博客](https://zhangshuqiao.org).
     - 所有汉字均能随意修改。
     - 不要试图在``showMessage()``中添加新的字段来随机输出，不过``messageArray = []``可以。
 2. 修改工具栏中关于页转跳链接
-    - 根据``waifu-tips.js``文件中的注释和已有代码进行修改即可（文件中约81-82行处）。
+    - 根据``waifu-tips.js``文件中的注释和已有代码进行修改即可。
 3. 修改首次访问时加载的模型及材质
-    - 根据``waifu-tips.js``文件中的注释和已有代码进行修改即可（文件中约166-169行处）。
+    - 根据``waifu-tips.js``文件中的注释和已有代码进行修改即可。
 4. 修改材质变换方式
-    - 根据``waifu-tips.js``文件中的注释和已有代码，修改``switch_textures``中的``switch``即可（文件中约235-236行处）。
+    - 根据``waifu-tips.js``文件中的注释和已有代码，修改``switch_textures``中的``switch``即可。
 ## waifu.css
 ### 建议
 1. 将看板娘在网页右边加载
@@ -61,8 +61,8 @@ Else API from [米米的博客](https://zhangshuqiao.org).
     - 注释掉``#waifu-tool {}``中的``right: -10px;``，并释放``/* left: 10px; */``或``right: 10px;``；
     - 注释掉``#waifu-toggle {}``中的``left: 0;``，并释放``/* right: 0; */``；
     - 注释掉``#waifu-toggle {}``中的``margin-left: -100px;``，并释放``/* margin-right: -100px; */``；
-    - 注释掉``#waifu-toggle {}``中的``transition: margin-left 1s;``，并释放``/* transition: margin-right 1s; */``；
-    - 注释掉``#waifu-toggle {}``中的``writing-mode: vertical-rl;``，并释放``/* writing-mode: vertical-lr; */``；
+    - 释放``#waifu-toggle {}``中的``/* transition: margin-right 1s !important; */``；
+    - 释放``#waifu-toggle {}``中的``/* writing-mode: vertical-lr !important; */``；
     - 注释掉``#waifu-toggle.waifu-toggle-active {}``中的``margin-left: -50px;``，并释放``/* margin-right: -40px; */``；
     - 注释掉``#waifu-toggle.waifu-toggle-active:hover {}``中的``margin-left: -50px;``，并释放``/* margin-right: -20px; */``。
 2. 修改工具栏颜色
