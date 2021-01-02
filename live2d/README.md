@@ -82,7 +82,7 @@ Else API from [米米的博客](https://zhangshuqiao.org).
         - 注释掉``#waifu-toggle {}``中的``margin-left: -100px;``，并释放``/* margin-right: -100px; */``；
         - 注释掉``#waifu-toggle {}``中的``transition: margin-left 1s;``，并释放``/* transition: margin-right 1s; */``；
         - 注释掉``#waifu-toggle {}``中的``writing-mode: vertical-rl;``，并释放``/* writing-mode: vertical-lr; */``；
-        - 注释掉``#waifu-toggle.waifu-toggle-active {}``中的``margin-left: -50px;``，并释放``/* margin-right: -40px; */；
+        - 注释掉``#waifu-toggle.waifu-toggle-active {}``中的``margin-left: -50px;``，并释放``/* margin-right: -40px; */``；
         - 注释掉``#waifu-toggle.waifu-toggle-active:hover {}``中的``margin-left: -50px;``，并释放``/* margin-right: -20px; */``。
 2. 修改工具栏颜色
     - 
