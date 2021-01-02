@@ -80,7 +80,7 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 ## waifu-tips.json
 - 根据自己网站的需要进行修改。
 - 目前，此文件相对[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的源文件没有进行修改。
-# 其他问题
+## 其他问题
 1. 为什么我的看板娘不加载工具栏？
     - 请确保该网页已加载Font Awesome v4或v5。
 2. 为什么我的看板娘不加载模型和材质？
