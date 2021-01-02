@@ -12,7 +12,7 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 ```
 示例网站：[demo.html](http://pfis.infinityfreeapp.com/live2d_widget_demo.html)
 # 开发建议及常见问题
-打开文件以查看更多注释，本文更多的是给像我这样的萌新看的。
+打开文件以查看更多注释，本文更多的是给像我这样的萌新看的。  
 引用[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的话：
 > - ``waifu-tips.js``包含了按钮和对话框的逻辑；  
 > - ``waifu-tips.json``中定义了触发条件（``selector``，CSS选择器）和触发时显示的文字（``text``）；  
