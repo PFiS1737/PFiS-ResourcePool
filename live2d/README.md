@@ -74,6 +74,14 @@ Else API from [米米的博客](https://zhangshuqiao.org).
         #waifu-toggle.waifu-toggle-active:hover {
             margin-right: -20px !important;
         }
+        
+        #waifu {
+            right: 0 !important;
+        }
+        
+        #waifu-tool {
+            left: 10px !important;
+        }
         ```
     - 方法二：直接修改
         - 注释掉``#waifu {}``中的``left: 0;``，并释放``/* right: 0; */``；
