@@ -29,7 +29,7 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 3. 更换API
     - 根据``autoload.js``文件中的注释和已有代码，释放已有``apiPath``或``cdnPath``(只能其一)，并注释掉多余的API即可（文件中约38-40行处），或添加自行搭建的API。
     - 引用[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的话：
-    > ``initWidget``方法接受名为``apiPath``和``cdnPath``的参数，两者设置其中一项即可。  
+    > - ``initWidget``方法接受名为``apiPath``和``cdnPath``的参数，两者设置其中一项即可。  
     > - 其中``apiPath``为后端API的URL，可以自行搭建，并增加模型（需要修改的内容比较多，此处不再赘述）。  
     > - 而``cdnPath``则是通过[jsDelivr](cdn.jsdelivr.net)这样的CDN服务加载资源，更加稳定。  
 ### 问题
