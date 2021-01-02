@@ -38,7 +38,7 @@ Else API from [米米的博客](https://zhangshuqiao.org).
         - 从[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)下载源码并放到网站目录  
         - 替换``autoload.js``里的API链接为``http[s]://网站域名/API所在目录/``  
 2. autoload.js文件中已有的apiPath和cdnPath有什么区别？
-    - ``https://live2d.fghrsh.net/api/``是[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中附带的[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)的API。共有7个模型，有大量材质，速度较快。不足的是1和7模型在显示时与屏幕下边缘存在较大缝隙。
+    - ``https://live2d.fghrsh.net/api/``是[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中附带的[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)的API。共有7个模型，有大量材质，速度较快。不足的是1和7模型在显示时与屏幕下边缘存在较大缝隙。可参考下文中``waifu.css``的建议3进行解决。
     - ``https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/``是[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中默认的API，使用[jsDelivr](cdn.jsdelivr.net)引用[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)中的文件而搭建成的API，受[jsDelivr](cdn.jsdelivr.net)缓存影响较大。
     - ``https://api.zsq.im/live2d/``来自[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中提到的[米米的博客](https://zhangshuqiao.org)的[custom.js](https://zhangshuqiao.org/lib/custom.js)文件（别问我是这么找着的，问就是扒网站源代码）。在修复了上面第一个API中的问题的同时，又添加了数十个新模型。可速度却大大降低。
 3. 为什么我的手机不能显示看板娘？
@@ -67,9 +67,11 @@ Else API from [米米的博客](https://zhangshuqiao.org).
     - 注释掉``#waifu-toggle.waifu-toggle-active:hover {}``中的``margin-left: -50px;``，并释放``/* margin-right: -20px; */``。
 2. 修改工具栏颜色
     - 
-3. 修改看板娘出场方向（上/下）
+3. 移动看板娘（上/下）
     - 
-4. 无论如何不显示对话框
+4. 移动看板娘（左/右）
+    -
+5. 无论如何不显示对话框
     - 
 ### 问题
 1. 我的看板娘已在网页中成功加载，但是我为什么看不见？
