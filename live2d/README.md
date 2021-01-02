@@ -41,7 +41,7 @@ Else API from [米米的博客](https://zhangshuqiao.org).
     - ``https://live2d.fghrsh.net/api/``是[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中附带的[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)的API。共有7个模型，有大量材质，速度较快。不足的是1和7模型在显示时与屏幕下边缘存在较大缝隙。
     - ``https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/``是[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中默认的API，使用[jsDelivr](cdn.jsdelivr.net)引用[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)中的文件而搭建成的API，受[jsDelivr](cdn.jsdelivr.net)缓存影响较大。
     - ``https://api.zsq.im/live2d/``来自[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中提到的[米米的博客](https://zhangshuqiao.org)的[custom.js](https://zhangshuqiao.org/lib/custom.js)文件（别问我是这么找着的，问就是扒网站源代码）。在修复了上面第一个API中的问题的同时，又添加了数十个新模型。可速度却大大降低。
-3. 为什么我的手机不能显示看板娘
+3. 为什么我的手机不能显示看板娘？
     - 参见上文中建议2。
 ## waifu-tips.js
 ### 建议
@@ -73,7 +73,7 @@ Else API from [米米的博客](https://zhangshuqiao.org).
     - 
 ### 问题
 1. 我的看板娘已在网页中成功加载，但是我为什么看不见？
-    - 根据``waifu.css``文件中的注释和已有代码，调大``#waifu {}``中的``z-index``属性，目前已调整为``1000``。
+    - 根据``waifu.css``文件中的注释和已有代码，调大``#waifu {}``和``#waifu-toggle {}``中的``z-index``属性，目前已调整为``1000``。
 2. 上文中建议1中第2步中的“释放``/* left: 10px; */``或``/* right: 10px; */``”有什么区别？
     - 释放``/* left: 10px; */``可以使工具栏在模型的左边。
     - 释放``/* right: 10px; */``可以使工具栏在模型的右边且不会超出屏幕边界。
