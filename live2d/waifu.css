@@ -17,6 +17,7 @@
 	width: 60px;
 	writing-mode: vertical-rl;
 	/* writing-mode: vertical-lr; */
+	z-index: 1000;
 }
 
 #waifu-toggle.waifu-toggle-active {
