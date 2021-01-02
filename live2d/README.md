@@ -25,12 +25,12 @@ Else API from [米米的博客](https://zhangshuqiao.org).<br />
 ### 问题
 1. 我如何搭建API？
     - 可参照[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)和[fghrsh的文章](https://www.fghrsh.net/post/170.html)。
-    > 从 GitHub 下载源码并放到网站目录 (https://github.com/fghrsh/live2d_api)  
-    全局替换 waifu-tips.js 里的 //api.fghrsh.net/live2d/ 为 http[s]://网站域名/API所在目录/  
+    > 从[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)下载源码并放到网站目录  
+    > 替换autoload.js里的API链接为``http[s]://网站域名/API所在目录/``  
 2. autoload.js文件中已有的apiPath和cdnPath有什么区别？
     - ``https://live2d.fghrsh.net/api/``是[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中附带的[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)的API。共有7个模型，有大量材质，速度较快。不足的是1和7模型在显示时与屏幕下边缘存在较大缝隙。
-    - ``https://api.zsq.im/live2d/``来自[米米的博客](https://zhangshuqiao.org)的[custom.js](https://zhangshuqiao.org/lib/custom.js)文件。在修复了上面那个API中的问题的同时，有添加了数十个新模型。可速度却大大降低。
-    - ``https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/``是[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中默认的API，在保留第一个API中存在的问题的同时，只有模型6可以更换材质，模型5可随缘更换。
+    - ``https://api.zsq.im/live2d/``来自[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中提到的[米米的博客](https://zhangshuqiao.org)的[custom.js](https://zhangshuqiao.org/lib/custom.js)文件（别忘我是这么找着的，问就是扒网站源代码）。在修复了上面那个API中的问题的同时，又添加了数十个新模型。可速度却大大降低。
+    - ``https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/``是[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中默认的API，使用[jsDelivr](cdn.jsdelivr.net)引用[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)中的文件而搭建成的API，受[jsDelivr](cdn.jsdelivr.net)缓存影响较大。
 3. 我的手机不能显示看板娘，我要怎么办？
     - 参见上文中建议2-修改最低显示宽度。
 ## waifu-tips.js
