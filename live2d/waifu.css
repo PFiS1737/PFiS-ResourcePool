@@ -116,8 +116,8 @@
 
 /* 工具栏触碰后的颜色 */
 #waifu-tool span:hover {
-	color: #0684bd;
-	/* color: #34495e; */
+	color: #0684bd; /* 浅蓝色 */
+	/* color: #34495e; */ /* 深灰色 */
 }
 
 @keyframes shake {
