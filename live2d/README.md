@@ -57,9 +57,9 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 ## waifu.css
 ### 建议
 1. 将看板娘在网页右边加载
-    1. 方法一：引用新的CSS进行覆盖
-    - 在``waifu.css``文件中添加以下字段：
-    ```CSS
+    - 方法一：引用新的CSS进行覆盖
+        - 在``waifu.css``文件中添加以下字段：
+        ```CSS
     #waifu-toggle {
         right: 0 !important;
         margin-right: -100px !important;
@@ -74,16 +74,16 @@ Else API from [米米的博客](https://zhangshuqiao.org).
     #waifu-toggle.waifu-toggle-active:hover {
         margin-right: -20px !important;
     }
-    ```
-    2. 方法二：直接修改
-    - 注释掉``#waifu {}``中的``left: 0;``，并释放``/* right: 0; */``；
-    - 注释掉``#waifu-tool {}``中的``right: -10px;``，并释放``/* left: 10px; */``或``right: 10px;``；
-    - 注释掉``#waifu-toggle {}``中的``left: 0;``，并释放``/* right: 0; */``；
-    - 注释掉``#waifu-toggle {}``中的``margin-left: -100px;``，并释放``/* margin-right: -100px; */``；
-    - 注释掉``#waifu-toggle {}``中的``transition: margin-left 1s;``，并释放``/* transition: margin-right 1s; */``；
-    - 注释掉``#waifu-toggle {}``中的``writing-mode: vertical-rl;``，并释放``/* writing-mode: vertical-lr; */``；
-    - 注释掉``#waifu-toggle.waifu-toggle-active {}``中的``margin-left: -50px;``，并释放``/* margin-right: -40px; */；
-    - 注释掉``#waifu-toggle.waifu-toggle-active:hover {}``中的``margin-left: -50px;``，并释放``/* margin-right: -20px; */``。
+        ```
+    - 方法二：直接修改
+        - 注释掉``#waifu {}``中的``left: 0;``，并释放``/* right: 0; */``；
+        - 注释掉``#waifu-tool {}``中的``right: -10px;``，并释放``/* left: 10px; */``或``right: 10px;``；
+        - 注释掉``#waifu-toggle {}``中的``left: 0;``，并释放``/* right: 0; */``；
+        - 注释掉``#waifu-toggle {}``中的``margin-left: -100px;``，并释放``/* margin-right: -100px; */``；
+        - 注释掉``#waifu-toggle {}``中的``transition: margin-left 1s;``，并释放``/* transition: margin-right 1s; */``；
+        - 注释掉``#waifu-toggle {}``中的``writing-mode: vertical-rl;``，并释放``/* writing-mode: vertical-lr; */``；
+        - 注释掉``#waifu-toggle.waifu-toggle-active {}``中的``margin-left: -50px;``，并释放``/* margin-right: -40px; */；
+        - 注释掉``#waifu-toggle.waifu-toggle-active:hover {}``中的``margin-left: -50px;``，并释放``/* margin-right: -20px; */``。
 2. 修改工具栏颜色
     - 
 3. 修改看板娘出场方向（上/下）
