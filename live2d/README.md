@@ -27,7 +27,7 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 2. 修改最低显示宽度
     - 根据``autoload.js``文件中的注释和已有代码修改``screen.width >= 768``中的``768``即可（文件中约30行处）。
 3. 更换API
-    - 根据``autoload.js``文件中的注释和已有代码，释放已有``apiPath``或``cdnPath``(只能其一)，并注释掉多余的API即可（文件中约38-40行处），或添加自行搭建的API。
+    - 根据``autoload.js``文件中的注释和已有代码，释放已有``apiPath``或``cdnPath``，并注释掉多余的API即可（文件中约38-40行处），或添加自行搭建的API。
     - 引用[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的话：
     > - ``initWidget``方法接受名为``apiPath``和``cdnPath``的参数，两者设置其中一项即可。  
     > - 其中``apiPath``为后端API的URL，可以自行搭建，并增加模型（需要修改的内容比较多，此处不再赘述）。  
