@@ -31,7 +31,7 @@ function loadWidget(config) {
 				<span class="fa fa-lg fa-times"></span>
 			</div>
 		</div>`);
-	// 工具栏菜单列表，与实际相同，由于最终会插入到网页中，需用<!--text-->注释
+	// 工具栏菜单列表，与实际顺序相同，由于最终会插入到网页中，需用<!--text-->注释
 	// https://stackoverflow.com/questions/24148403/trigger-css-transition-on-appended-element
 	setTimeout(() => {
 		document.getElementById("waifu").style.bottom = 0;
