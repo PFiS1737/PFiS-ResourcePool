@@ -41,7 +41,7 @@ Else API from [米米的博客](https://zhangshuqiao.org).
         - 替换``autoload.js``里的API链接为``http[s]://网站域名/API所在目录/``  
 2. autoload.js文件中已有的apiPath和cdnPath有什么区别？
     - ``https://live2d.fghrsh.net/api/``是[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中附带的[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)的API。共有7个模型，有大量材质，速度较快。不足的是1和7模型在显示时与屏幕下边缘存在较大缝隙。可参考下文中``waifu.css``的建议3进行解决。
-    - ``https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/``是[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中默认的API，使用[jsDelivr](cdn.jsdelivr.net)引用[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)中的文件而搭建成的API，受[jsDelivr](cdn.jsdelivr.net)缓存影响较大。
+    - ``https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/``是[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中默认的API，使用[jsDelivr](cdn.jsdelivr.net)引用[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)中的文件而搭建成。因为文件总大小大于50M，[jsDelivr](cdn.jsdelivr.net)不能正常引用。
     - ``https://api.zsq.im/live2d/``来自[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中提到的[米米的博客](https://zhangshuqiao.org)的[custom.js](https://zhangshuqiao.org/lib/custom.js)文件（别问我是这么找着的，问就是扒网站源代码）。在修复了上面第一个API中的问题的同时，又添加了数十个新模型。可速度却大大降低。
 3. 为什么我的手机不能显示看板娘？
     - 参见上文中建议2。
