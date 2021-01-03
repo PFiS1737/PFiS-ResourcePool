@@ -1,7 +1,8 @@
 # 信息
-Copy from [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget), [米米的博客](https://zhangshuqiao.org).  
+Copy from [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget).
 Else API from [米米的博客](https://zhangshuqiao.org).  
 基本用法：``https://cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/file``  
+# 引入
 在``</body>``前添加：
 ```html
 <script src="https://cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/autoload.js"></script>
@@ -10,7 +11,8 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
 ```
-示例网站：[demo.html](http://pfis.infinityfreeapp.com/live2d_widget_demo.html)
+# 示例网站
+[demo.html](http://pfis.infinityfreeapp.com/live2d_widget_demo.html)
 # 开发笔记
 打开文件以查看更多注释，本文更多的是给像我这样的萌新看的。  
 引用[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)中的话：
