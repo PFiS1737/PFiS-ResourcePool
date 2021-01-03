@@ -2,7 +2,7 @@
 Copy from [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget), [米米的博客](https://zhangshuqiao.org).  
 Else API from [米米的博客](https://zhangshuqiao.org).  
 基本用法：``https://cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/file``  
-在网站中添加：
+在``</body>``前添加：
 ```html
 <script src="https://cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/autoload.js"></script>
 ```
@@ -91,15 +91,21 @@ Else API from [米米的博客](https://zhangshuqiao.org).
     ```
 ## waifu.css
 ### 建议
-1. 将看板娘在网页右边加载
-    - 注释掉``#waifu {}``中的``left: 0;``，并释放``/* right: 0; */``；
-    - 注释掉``#waifu-tool {}``中的``right: -10px;``，并释放``/* left: 10px; */``或``right: 10px;``；
-    - 注释掉``#waifu-toggle {}``中的``left: 0;``，并释放``/* right: 0; */``；
-    - 注释掉``#waifu-toggle {}``中的``margin-left: -100px;``，并释放``/* margin-right: -100px; */``；
-    - 释放``#waifu-toggle {}``中的``/* transition: margin-right 1s !important; */``；
-    - 释放``#waifu-toggle {}``中的``/* writing-mode: vertical-lr !important; */``；
-    - 注释掉``#waifu-toggle.waifu-toggle-active {}``中的``margin-left: -50px;``，并释放``/* margin-right: -40px; */``；
-    - 注释掉``#waifu-toggle.waifu-toggle-active:hover {}``中的``margin-left: -50px;``，并释放``/* margin-right: -20px; */``。
+1. 将看板娘放在网页右边
+    - 懒人专用
+        - 直接在``</body>``前添加（不要和本文开头的那个一起加）：
+	```html
+        <script src="https://cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/special/autoload_right.js"></script>
+        ```
+    - 修改文件
+        - 注释掉``#waifu {}``中的``left: 0;``，并释放``/* right: 0; */``；
+        - 注释掉``#waifu-tool {}``中的``right: -10px;``，并释放``/* left: 10px; */``或``right: 10px;``；
+        - 注释掉``#waifu-toggle {}``中的``left: 0;``，并释放``/* right: 0; */``；
+        - 注释掉``#waifu-toggle {}``中的``margin-left: -100px;``，并释放``/* margin-right: -100px; */``；
+        - 释放``#waifu-toggle {}``中的``/* transition: margin-right 1s !important; */``；
+        - 释放``#waifu-toggle {}``中的``/* writing-mode: vertical-lr !important; */``；
+        - 注释掉``#waifu-toggle.waifu-toggle-active {}``中的``margin-left: -50px;``，并释放``/* margin-right: -40px; */``；
+        - 注释掉``#waifu-toggle.waifu-toggle-active:hover {}``中的``margin-left: -50px;``，并释放``/* margin-right: -20px; */``。
 2. 修改工具栏颜色
     - 
 3. 移动看板娘（上/下）
