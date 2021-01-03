@@ -55,7 +55,9 @@ Else API from [米米的博客](https://zhangshuqiao.org).
 4. 修改材质变换方式
     - 根据``waifu-tips.js``文件中的注释和已有代码，修改``switch_textures``中的``switch``即可。
 5. 删除不想要的工具栏按钮
-    - 根据``waifu-tips.js``文件中的注释和已有代码修改即可，参考以下例子：
+    - 根据``waifu-tips.js``文件中的注释和已有代码修改即可。
+    - 并可参考下文中``waifu.css``的建议6，修改按钮间间距。
+    - 可参考以下例子进行修改：
     ```JavaScript
     //删除“纸飞机”按钮
     ... ...
@@ -106,6 +108,7 @@ Else API from [米米的博客](https://zhangshuqiao.org).
     -
 5. 无论如何不显示对话框
     - 
+6. 修改工具栏按钮间距
 ### 问题
 1. 我的看板娘已在网页中成功加载，但是我为什么看不见？
     - 根据``waifu.css``文件中的注释和已有代码，调大``#waifu {}``和``#waifu-toggle {}``中的``z-index``属性，目前已调整为``1000``。
