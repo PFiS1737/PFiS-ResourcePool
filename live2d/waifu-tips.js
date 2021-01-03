@@ -31,6 +31,7 @@ function loadWidget(config) {
 				<span class="fa fa-lg fa-times"></span>
 			</div>
 		</div>`);
+	// 工具栏菜单列表，与实际相同，由于最终会插入到网页中，需用<!--text-->注释
 	// https://stackoverflow.com/questions/24148403/trigger-css-transition-on-appended-element
 	setTimeout(() => {
 		document.getElementById("waifu").style.bottom = 0;
@@ -59,8 +60,10 @@ function loadWidget(config) {
 	}, 1000);
 
 	(function registerEventListener() {
+		// 工具栏菜单效果
 		document.querySelector("#waifu-tool .fa-comment").addEventListener("click", showHitokoto);
 		document.querySelector("#waifu-tool .fa-paper-plane").addEventListener("click", () => {
+			// 飞机大战（雾）
 			if (window.Asteroids) {
 				if (!window.ASTEROIDSPLAYERS) window.ASTEROIDSPLAYERS = [];
 				window.ASTEROIDSPLAYERS.push(new Asteroids());
@@ -74,7 +77,7 @@ function loadWidget(config) {
 		document.querySelector("#waifu-tool .fa-street-view").addEventListener("click", loadRandModel);
 		document.querySelector("#waifu-tool .fa-camera-retro").addEventListener("click", () => {
 			showMessage("照好了嘛，是不是很可爱呢？", 6000, 9);
-			Live2D.captureName = "photo.png";
+			Live2D.captureName = "photo.png"; // 输出照片的名字
 			Live2D.captureFrame = true;
 		});
 		document.querySelector("#waifu-tool .fa-info-circle").addEventListener("click", () => {
@@ -91,6 +94,7 @@ function loadWidget(config) {
 				document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
 			}, 3000);
 		});
+		// 到这结束
 		const devtools = () => { };
 		console.log("%c", devtools);
 		devtools.toString = () => {
