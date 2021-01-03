@@ -59,12 +59,9 @@ function loadWidget(config) {
 		}
 	}, 1000);
 
-	(function registerEventListener() {
-		// 工具栏菜单效果
-		document.querySelector("#waifu-tool .fa-comment").addEventListener("click", showHitokoto);
-		// 一言API对话
-		document.querySelector("#waifu-tool .fa-paper-plane").addEventListener("click", () => {
-			// 飞机大战（雾）
+	(function registerEventListener() { // 工具栏菜单效果
+		document.querySelector("#waifu-tool .fa-comment").addEventListener("click", showHitokoto); // 一言API对话
+		document.querySelector("#waifu-tool .fa-paper-plane").addEventListener("click", () => { // 飞机大战（雾）
 			if (window.Asteroids) {
 				if (!window.ASTEROIDSPLAYERS) window.ASTEROIDSPLAYERS = [];
 				window.ASTEROIDSPLAYERS.push(new Asteroids());
@@ -74,12 +71,9 @@ function loadWidget(config) {
 				document.head.appendChild(script);
 			}
 		});
-		document.querySelector("#waifu-tool .fa-user-circle").addEventListener("click", loadOtherModel);
-		// 切换模型
-		document.querySelector("#waifu-tool .fa-street-view").addEventListener("click", loadRandModel);
-		// 切换材质
-		document.querySelector("#waifu-tool .fa-camera-retro").addEventListener("click", () => {
-			// 输出照片
+		document.querySelector("#waifu-tool .fa-user-circle").addEventListener("click", loadOtherModel); // 切换模型
+		document.querySelector("#waifu-tool .fa-street-view").addEventListener("click", loadRandModel); // 切换材质
+		document.querySelector("#waifu-tool .fa-camera-retro").addEventListener("click", () => { // 输出照片
 			showMessage("照好了嘛，是不是很可爱呢？", 6000, 9);
 			Live2D.captureName = "photo.png"; // 输出照片的名字
 			Live2D.captureFrame = true;
@@ -89,8 +83,7 @@ function loadWidget(config) {
 			// open("https://github.com/stevenjoezhang/live2d-widget");
 			open("https://github.com/PFiS1737/PFiS_Public_Repository/tree/main/live2d");
 		});
-		document.querySelector("#waifu-tool .fa-times").addEventListener("click", () => {
-			// 关闭看板娘
+		document.querySelector("#waifu-tool .fa-times").addEventListener("click", () => { // 关闭看板娘
 			localStorage.setItem("waifu-display", Date.now());
 			showMessage("愿你有一天能与重要的人重逢。", 2000, 11);
 			document.getElementById("waifu").style.bottom = "-500px";
@@ -115,8 +108,7 @@ function loadWidget(config) {
 
 	(function welcomeMessage() {
 		let text;
-		if (location.pathname === "/") {
-			// 如果是主页
+		if (location.pathname === "/") { // 如果是主页
 			const now = new Date().getHours();
 			if (now > 5 && now <= 7) text = "早上好！一日之计在于晨，美好的一天就要开始了。";
 			else if (now > 7 && now <= 11) text = "上午好！工作顺利嘛，不要久坐，多起来走动走动哦！";
@@ -140,8 +132,7 @@ function loadWidget(config) {
 		showMessage(text, 7000, 8);
 	})();
 
-	function showHitokoto() {
-		// 增加 hitokoto.cn 的 API
+	function showHitokoto() { // 增加 hitokoto.cn 的 API
 		fetch("https://v1.hitokoto.cn")
 			.then(response => response.json())
 			.then(result => {
