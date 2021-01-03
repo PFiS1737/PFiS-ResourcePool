@@ -49,11 +49,39 @@ Else API from [米米的博客](https://zhangshuqiao.org).
     - 所有汉字均能随意修改。
     - 不要试图在``showMessage()``中添加新的字段来随机输出，不过``messageArray = []``可以。
 2. 修改工具栏中关于页转跳链接
-    - 根据``waifu-tips.js``文件中的注释和已有代码进行修改即可。
+    - 根据``waifu-tips.js``文件中的注释和已有代码，修改``open("YourURL");``即可。
 3. 修改首次访问时加载的模型及材质
-    - 根据``waifu-tips.js``文件中的注释和已有代码进行修改即可。
+    - 根据``waifu-tips.js``文件中的注释和已有代码，修改``modelId = ;``和``modelTexturesId = ;``即可。
 4. 修改材质变换方式
     - 根据``waifu-tips.js``文件中的注释和已有代码，修改``switch_textures``中的``switch``即可。
+5. 删除不想要的工具栏按钮
+    - 根据``waifu-tips.js``文件中的注释和已有代码修改即可，参考以下例子：
+    ```JavaScript
+    //删除“纸飞机”按钮
+    ... ...
+    <div id="waifu-tool">
+        <span class="fa fa-lg fa-comment"></span>
+		<!--<span class="fa fa-lg fa-paper-plane"></span>-->
+		<span class="fa fa-lg fa-user-circle"></span>
+		<span class="fa fa-lg fa-street-view"></span>
+		<span class="fa fa-lg fa-camera-retro"></span>
+		<span class="fa fa-lg fa-info-circle"></span>
+		<span class="fa fa-lg fa-times"></span>
+	</div>
+    ... ...
+    document.querySelector("#waifu-tool .fa-comment").addEventListener("click", showHitokoto); // 一言API对话
+	// document.querySelector("#waifu-tool .fa-paper-plane").addEventListener("click", () => { // 飞机大战（雾）
+		// if (window.Asteroids) {
+			// if (!window.ASTEROIDSPLAYERS) window.ASTEROIDSPLAYERS = [];
+			// window.ASTEROIDSPLAYERS.push(new Asteroids());
+		// } else {
+			// const script = document.createElement("script");
+			// script.src = "https://cdn.jsdelivr.net/gh/stevenjoezhang/asteroids/asteroids.js";
+			// document.head.appendChild(script);
+		// }
+	// });
+	document.querySelector("#waifu-tool .fa-user-circle").addEventListener("click", loadOtherModel); // 切换模型
+    ```
 ## waifu.css
 ### 建议
 1. 将看板娘在网页右边加载
