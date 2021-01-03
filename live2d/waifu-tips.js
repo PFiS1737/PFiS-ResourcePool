@@ -62,6 +62,7 @@ function loadWidget(config) {
 	(function registerEventListener() {
 		// 工具栏菜单效果
 		document.querySelector("#waifu-tool .fa-comment").addEventListener("click", showHitokoto);
+		// 一言API对话
 		document.querySelector("#waifu-tool .fa-paper-plane").addEventListener("click", () => {
 			// 飞机大战（雾）
 			if (window.Asteroids) {
@@ -74,8 +75,11 @@ function loadWidget(config) {
 			}
 		});
 		document.querySelector("#waifu-tool .fa-user-circle").addEventListener("click", loadOtherModel);
+		// 切换模型
 		document.querySelector("#waifu-tool .fa-street-view").addEventListener("click", loadRandModel);
+		// 切换材质
 		document.querySelector("#waifu-tool .fa-camera-retro").addEventListener("click", () => {
+			// 输出照片
 			showMessage("照好了嘛，是不是很可爱呢？", 6000, 9);
 			Live2D.captureName = "photo.png"; // 输出照片的名字
 			Live2D.captureFrame = true;
@@ -86,6 +90,7 @@ function loadWidget(config) {
 			open("https://github.com/PFiS1737/PFiS_Public_Repository/tree/main/live2d");
 		});
 		document.querySelector("#waifu-tool .fa-times").addEventListener("click", () => {
+			// 关闭看板娘
 			localStorage.setItem("waifu-display", Date.now());
 			showMessage("愿你有一天能与重要的人重逢。", 2000, 11);
 			document.getElementById("waifu").style.bottom = "-500px";
