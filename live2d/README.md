@@ -59,15 +59,20 @@ Else API from [米米的博客](https://zhangshuqiao.org).
     ```JavaScript
     //删除“纸飞机”按钮
     ... ...
-    <div id="waifu-tool">
-        <span class="fa fa-lg fa-comment"></span>
-		<!--<span class="fa fa-lg fa-paper-plane"></span>-->
-		<span class="fa fa-lg fa-user-circle"></span>
-		<span class="fa fa-lg fa-street-view"></span>
-		<span class="fa fa-lg fa-camera-retro"></span>
-		<span class="fa fa-lg fa-info-circle"></span>
-		<span class="fa fa-lg fa-times"></span>
-	</div>
+    document.body.insertAdjacentHTML("beforeend", `<div id="waifu">
+		<div id="waifu-tips"></div>
+		<canvas id="live2d" width="800" height="800"></canvas>
+		<div id="waifu-tool">
+			<span class="fa fa-lg fa-comment"></span>
+			<!--<span class="fa fa-lg fa-paper-plane"></span>-->
+			<span class="fa fa-lg fa-user-circle"></span>
+			<span class="fa fa-lg fa-street-view"></span>
+			<span class="fa fa-lg fa-camera-retro"></span>
+			<span class="fa fa-lg fa-info-circle"></span>
+			<span class="fa fa-lg fa-times"></span>
+		</div>
+	</div>`);
+    // 工具栏菜单列表，与实际相同，由于最终会插入到网页中，需用<!--text-->注释
     ... ...
     document.querySelector("#waifu-tool .fa-comment").addEventListener("click", showHitokoto); // 一言API对话
 	// document.querySelector("#waifu-tool .fa-paper-plane").addEventListener("click", () => { // 飞机大战（雾）
