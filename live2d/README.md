@@ -1,4 +1,4 @@
-> 本文件夹已迁移至[PFiS1737/live2d-widget](https://github.com/PFiS1737/live2d-widget)，并停止在此处更新更新
+> 本文件夹已迁移至[PFiS1737/live2d-widget](https://github.com/PFiS1737/live2d-widget)，并停止在此处更新
 
 # 信息
 Copy from [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget).
