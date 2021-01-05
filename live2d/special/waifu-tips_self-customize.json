@@ -1,7 +1,7 @@
 {
 	"mouseover": [{
 		"selector": "#waifu #live2d",
-		"text": ["干嘛呢你，快把手拿开～～", "鼠…鼠标放错地方了！", "你要干嘛呀？", "喵喵喵？", "怕怕(ノ≧∇≦)ノ", "非礼呀！救命！", "这样的话，只能使用武力了！", "我要生气了哦", "不要动手动脚的！", "真…真的是不知羞耻！", "Hentai！"]
+		"text": ["干嘛呢你，快把手拿开～～", "鼠…鼠标放错地方了！", "你要干嘛呀？", "喵喵喵？", "害怕.jpg", "非礼呀！救命！", "这样的话，只能使用武力了！", "我要生气了哦", "不要动手动脚的！", "真…真的是不知羞耻！", "Hentai！"]
 	}, {
 		"selector": "#waifu-tool .fa-comment",
 		"text": ["猜猜我要说些什么？", "我从青蛙王子那里听到了不少人生经验。"]
@@ -46,10 +46,13 @@
 		"text": ["找不到想看的内容？搜索看看吧！", "在找什么东西呢，需要帮忙吗？"]
 	}, {
 		"selector": "a[href='#']",
-		"text": ["快看看这里都有什么呢？"]
+		"text": ["快看看这里都有什么呢？", "这个好像可以点开呢～"]
 	}, {
 		"selector": "a[href='?eruda=true']",
 		"text": ["想在移动端调试网页吗？", "点这里可以看到我的小秘密哟～"]
+	}, {
+		"selector": "a[href='/wp-admin'], a[href='/wp-admin/'], a[href='http://pfis.infinityfreeapp.com/wp-admin'], a[href='http://pfis.infinityfreeapp.com/wp-admin/'], ",
+		"text": ["你是管理员吗？", "这是网站后台哟～"]
 	}, {
 		"selector": ".site-author",
 		"text": ["我家主人好看吗？", "这是我家主人(*´∇｀*)"]
