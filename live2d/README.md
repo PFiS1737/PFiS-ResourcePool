@@ -1,5 +1,7 @@
 > 本文件夹已迁移至[PFiS1737/live2d-widget](https://github.com/PFiS1737/live2d-widget)，并停止在此处更新
 
+> 其实仍然在更新，预计于寒假中完成剩余迁移工作
+
 # 信息
 Copy from [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget).
 Else API from [米米的博客](https://zhangshuqiao.org).  
