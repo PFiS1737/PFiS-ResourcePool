@@ -27,22 +27,22 @@
 		"selector": "a[href='/'], a[href='http://pfis.infinityfreeapp.com'], a[href='http://pfis.infinityfreeapp.com/']",
 		"text": ["点击前往首页，想回到上一页可以使用浏览器的后退功能哦。", "点它就可以回到首页啦！", "回首页看看吧。"]
 	}, {
-		"selector": "a[href='/about'], a[href='/about/'], a[href='http://pfis.infinityfreeapp.com/about'], a[href='http://pfis.infinityfreeapp.com/about/']",
+		"selector": "a[href='/about'], a[href='http://pfis.infinityfreeapp.com/about'], a[href='http://pfis.infinityfreeapp.com/about/']",
 		"text": ["你想知道我家主人是谁吗？", "这里有一些关于我家主人的秘密哦，要不要看看呢？", "发现主人出没地点！", "要看看我家的发展史吗？", "这里藏着我家的一些小秘密哦！"]
 	}, {
-		"selector": "a[href='/tags'], a[href='/tags/'], a[href='http://pfis.infinityfreeapp.com/tags'], a[href='http://pfis.infinityfreeapp.com/tags/']",
+		"selector": "a[href='/tags'], a[href='http://pfis.infinityfreeapp.com/tags'], a[href='http://pfis.infinityfreeapp.com/tags/']",
 		"text": ["点击就可以看文章的标签啦！", "点击来查看所有标签哦。"]
 	}, {
-		"selector": "a[href='/categories'], a[href='/categories/'], a[href='http://pfis.infinityfreeapp.com/categories'], a[href='http://pfis.infinityfreeapp.com/categories/']",
+		"selector": "a[href='/categories'], a[href='http://pfis.infinityfreeapp.com/categories'], a[href='http://pfis.infinityfreeapp.com/categories/']",
 		"text": ["文章都分类好啦～", "点击来查看文章分类哦。"]
 	}, {
-		"selector": "a[href='/timeline'], a[href='/timeline/'], a[href='http://pfis.infinityfreeapp.com/timeline'], a[href='http://pfis.infinityfreeapp.com/timeline/']",
+		"selector": "a[href='/timeline'], a[href='http://pfis.infinityfreeapp.com/timeline'], a[href='http://pfis.infinityfreeapp.com/timeline/']",
 		"text": ["翻页比较麻烦吗，那就来看看文章归档吧。", "文章目录都整理在这里啦！", "是时间轴哎，可以看到主人的所有文章哦～"]
 	}, {
-		"selector": "a[href='/links'], a[href='/links/'], a[href='http://pfis.infinityfreeapp.com/links'], a[href='http://pfis.infinityfreeapp.com/links/']",
+		"selector": "a[href='/links'], a[href='http://pfis.infinityfreeapp.com/links'], a[href='http://pfis.infinityfreeapp.com/links/']",
 		"text": ["这是我的朋友们哦ヾ(◍°∇°◍)ﾉﾞ", "要去大佬们的家看看吗？", "要去拜访一下我的朋友们吗？", "主人的朋友…就是我的朋友啦ヾ(◍°∇°◍)ﾉﾞ"]
 	}, {
-		"selector": ".menu-item-search a",
+		"selector": "#SearchBar",
 		"text": ["找不到想看的内容？搜索看看吧！", "在找什么东西呢，需要帮忙吗？"]
 	}, {
 		"selector": "a[href='#']",
@@ -51,8 +51,8 @@
 		"selector": "a[href='?eruda=true']",
 		"text": ["想在移动端调试网页吗？", "点这里可以看到我的小秘密哟～"]
 	}, {
-		"selector": "a[href='/wp-admin'], a[href='/wp-admin/'], a[href='http://pfis.infinityfreeapp.com/wp-admin'], a[href='http://pfis.infinityfreeapp.com/wp-admin/'], ",
-		"text": ["你是管理员吗？", "这是网站后台哟～"]
+		"selector": "a[href='/wp-admin'], a[href='/wp-admin/'], a[href='http://pfis.infinityfreeapp.com/wp-admin'], a[href='http://pfis.infinityfreeapp.com/wp-admin/']",
+		"text": ["你是主人吗？", "这是网站后台哟～", "这里只有主人可以进哦～"]
 	}, {
 		"selector": ".site-author",
 		"text": ["我家主人好看吗？", "这是我家主人(*´∇｀*)"]
@@ -69,10 +69,13 @@
 		"selector": ".links-of-author",
 		"text": ["这里是主人的常驻地址哦。", "这里有主人的联系方式！"]
 	}, {
-		"selector": "#qrcode",
+		"selector": "button[mdui-menu="{target: '#qrcode'}"]",
 		"text": ["手机扫一下就能继续看，很方便呢～", "扫一扫，打开新世界的大门！"]
 	}, {
 		"selector": ".fancybox img, img.medium-zoom-image",
+		"text": ["点击图片可以放大呢！"]
+	}, {
+		"selector": "button[mdui-drawer="{target:'#left-drawer',overlay:true}"]",
 		"text": ["点击图片可以放大呢！"]
 	}, {
 		"selector": ".copy-btn",
@@ -120,25 +123,31 @@
 		"selector": "#bitcoin",
 		"text": ["这是我的比特币账号！"]
 	}, {
-		"selector": "#needsharebutton-postbottom .btn",
+		"selector": "button[mdui-menu="{target: '#mdxshare'}"]",
 		"text": ["好东西要让更多人知道才行哦。", "觉得文章有帮助的话，可以分享给更多需要的朋友呢。"]
 	}, {
-		"selector": ".need-share-button_weibo",
+		"selector": "a[href='javascript:mdx_show_img()']",
+		"text": ["输出为图片？"]
+	}, {
+		"selector": "a[href*='http://service.weibo.com/share/share.php?']",
 		"text": ["微博？来分享一波喵！"]
 	}, {
-		"selector": ".need-share-button_wechat",
+		"selector": "a[href='javascript:share_wechat()']",
 		"text": ["分享到微信吧！"]
 	}, {
-		"selector": ".need-share-button_douban",
-		"text": ["分享到豆瓣好像也不错！"]
+		"selector": "a[href*='http://connect.qq.com/widget/shareqq/index.html?']",
+		"text": ["好东西当然要分享到QQ好友那里啦！"]
 	}, {
-		"selector": ".need-share-button_qqzone",
+		"selector": "a[href*='https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?']",
 		"text": ["QQ 空间，一键转发，耶～"]
 	}, {
-		"selector": ".need-share-button_twitter",
+		"selector": "a[href*='https://telegram.me/share/url?']",
+		"text": ["电报？现在还有人用那东西？"]
+	}, {
+		"selector": "a[href*='https://twitter.com/intent/tweet?']",
 		"text": ["Twitter？好像是不存在的东西？"]
 	}, {
-		"selector": ".need-share-button_facebook",
+		"selector": "a[href*='https://www.facebook.com/sharer.php?']",
 		"text": ["emmm…FB 好像也是不存在的东西？"]
 	}, {
 		"selector": ".post-nav-item a[rel='next']",
