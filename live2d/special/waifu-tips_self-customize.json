@@ -76,9 +76,9 @@
 		"text": ["点击图片可以放大呢！"]
 	}, {
 		"selector": "button[mdui-drawer="{target:'#left-drawer',overlay:true}"]",
-		"text": ["点击图片可以放大呢！"]
+		"text": ["点击查看本站导航和文字目录哟。"]
 	}, {
-		"selector": ".copy-btn",
+		"selector": ".toolbar-item",
 		"text": ["代码可以直接点击复制哟。"]
 	}, {
 		"selector": ".highlight .table-container, .gist",
