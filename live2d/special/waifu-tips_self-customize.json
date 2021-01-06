@@ -75,7 +75,7 @@
 		"selector": ".fancybox img, img.medium-zoom-image",
 		"text": ["点击图片可以放大呢！"]
 	}, {
-		"selector": "button[mdui-drawer]",
+		"selector": "button[mdui-drawer='{target:'#left-drawer',overlay:true}']",
 		"text": ["点击查看本站导航和文字目录哟。"]
 	}, {
 		"selector": ".toolbar-item",
