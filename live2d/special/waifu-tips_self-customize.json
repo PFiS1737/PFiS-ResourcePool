@@ -69,13 +69,13 @@
 		"selector": ".links-of-author",
 		"text": ["这里是主人的常驻地址哦。", "这里有主人的联系方式！"]
 	}, {
-		"selector": "button[mdui-menu="{target: '#qrcode'}"]",
+		"selector": "button[mdui-menu='{target: '#qrcode'}']",
 		"text": ["手机扫一下就能继续看，很方便呢～", "扫一扫，打开新世界的大门！"]
 	}, {
 		"selector": ".fancybox img, img.medium-zoom-image",
 		"text": ["点击图片可以放大呢！"]
 	}, {
-		"selector": "button[mdui-drawer="{target:'#left-drawer',overlay:true}"]",
+		"selector": "button[mdui-drawer]",
 		"text": ["点击查看本站导航和文字目录哟。"]
 	}, {
 		"selector": ".toolbar-item",
@@ -123,7 +123,7 @@
 		"selector": "#bitcoin",
 		"text": ["这是我的比特币账号！"]
 	}, {
-		"selector": "button[mdui-menu="{target: '#mdxshare'}"]",
+		"selector": "button[mdui-menu='{target: '#mdxshare'}']",
 		"text": ["好东西要让更多人知道才行哦。", "觉得文章有帮助的话，可以分享给更多需要的朋友呢。"]
 	}, {
 		"selector": "a[href='javascript:mdx_show_img()']",
