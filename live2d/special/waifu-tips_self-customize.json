@@ -87,7 +87,7 @@
 		"selector": "a[href^='mailto']",
 		"text": ["邮件我会及时回复的！", "点击就可以发送邮件啦～"]
 	}, {
-		"selector": "a[href^='http://pfis.infinityfreeapp.com/blog/tags/']",
+		"selector": "a[href^='http://pfis.infinityfreeapp.com/blog/tags/'], a[rel='tag']",
 		"text": ["要去看看 <span>{text}</span> 标签么？", "点它可以查看此标签下的所有文章哟！"]
 	}, {
 		"selector": "a[href^='http://pfis.infinityfreeapp.com/blog/categories/']",
@@ -123,7 +123,7 @@
 		"selector": "#bitcoin",
 		"text": ["这是我的比特币账号！"]
 	}, {
-		"selector": "button[mdui-menu='{target: '#mdxshare'}']",
+		"selector": "button[class~='mdx-share']",
 		"text": ["好东西要让更多人知道才行哦。", "觉得文章有帮助的话，可以分享给更多需要的朋友呢。"]
 	}, {
 		"selector": "a[href='javascript:mdx_show_img()']",
