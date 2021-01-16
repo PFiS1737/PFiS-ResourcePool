@@ -53,7 +53,7 @@ function startSakura() {
     document.getElementsByTagName("body")[0].appendChild(canvas),
     cxt = canvas.getContext("2d");
     for (var sakuraList = new SakuraList,
-    i = 0; i < 35; i++) {
+    i = 0; i < 35; i++) {   /*"35"为樱花数量*/
         var sakura, randomX, randomY, randomS, randomR, randomFnx, randomFny;
         randomX = getRandom("x"),
         randomY = getRandom("y"),
