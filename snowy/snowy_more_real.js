@@ -5,7 +5,7 @@
 			documentWidth = $(document).width(),
 			defaults = {
 				minSize	: 10,   //雪花的最小尺寸
-				maxSize	: 20,   //雪花的最大尺寸
+				maxSize : 20,   //雪花的最大尺寸
 				newOn : 1000,   //雪花出现的频率
 				flakeColor : "#FFFFFF"			
 			},
