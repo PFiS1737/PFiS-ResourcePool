@@ -4,6 +4,7 @@
 
 # 信息
 > 请遵循原作者的开源及转载协议。  
+
 Copy from [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget).  
 Else API from [米米的博客](https://zhangshuqiao.org).  
 基本用法：``https://cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/file``  
