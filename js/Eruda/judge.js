@@ -1,5 +1,5 @@
 (function showEruda() {
-    var eruda = localStorage.getItem('eruda');
+    let eruda = localStorage.getItem('eruda');
     if (eruda === 'false') {
         localStorage.setItem('eruda','true');
         location.reload();
