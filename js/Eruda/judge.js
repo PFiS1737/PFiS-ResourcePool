@@ -7,4 +7,4 @@
         localStorage.setItem('eruda','false');
         location.reload();
     }
-})()
+})();
