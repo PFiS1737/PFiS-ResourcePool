@@ -1,13 +1,19 @@
-(function showLive2D() {
-    var live2d = localStorage.getItem('live2d');
-    if (live2d === 'false') {
-        localStorage.setItem('live2d','right');
+(function showSakura() {
+    var sakura = localStorage.getItem('sakura');
+    if (sakura === 'false') {
+        localStorage.setItem('sakura','native');
         location.reload();
-    } else if (live2d === 'right') {
-        localStorage.setItem('live2d','left');
+    } else if (sakura === 'native') {
+        localStorage.setItem('sakura','half');
         location.reload();
-    } else if (live2d === 'left') {
-        localStorage.setItem('live2d','false');
+    } else if (sakura === 'half') {
+        localStorage.setItem('sakura','quarter');
+        location.reload();
+    } else if (sakura === 'quarter') {
+        localStorage.setItem('sakura','less');
+        location.reload();
+    } else if (sakura === 'less') {
+        localStorage.setItem('sakura','false');
         location.reload();
     }
 })();
