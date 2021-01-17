@@ -1,4 +1,4 @@
-(function showEruda() {
+(function showLive2D() {
     var live2d = localStorage.getItem('live2d');
     if (live2d === 'false') {
         localStorage.setItem('live2d','right');
@@ -10,4 +10,4 @@
         localStorage.setItem('live2d','false');
         location.reload();
     }
-}
+})();
