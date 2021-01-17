@@ -1,10 +1,10 @@
 (function showEruda() {
     var eruda = localStorage.getItem('eruda');
     if (eruda === 'false') {
-        self.location.href="javascript:localStorage.setItem('eruda','true')";
+        localStorage.setItem('eruda','true');
         location.reload();
     } else if (eruda === 'true') {
-        self.location.href="javascript:localStorage.setItem('eruda','false')";
+        localStorage.setItem('eruda','false');
         location.reload();
     }
 }
