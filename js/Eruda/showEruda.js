@@ -1,6 +1,6 @@
 (function ErudaLoad() {
     if (localStorage.getItem('eruda') === 'true') {
-        document.write('<scr' + 'ipt src=" + '//cdn.jsdelivr.net/npm/eruda' + "></scr' + 'ipt>');
+        document.write('<scr' + 'ipt src="' + '//cdn.jsdelivr.net/npm/eruda' + '"></scr' + 'ipt>');
         document.write('<scr' + 'ipt>eruda.init();</scr' + 'ipt>');
     }
 })();
