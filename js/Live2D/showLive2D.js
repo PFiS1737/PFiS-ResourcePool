@@ -12,22 +12,17 @@ function Live2DJudge() {
     if (localStorage.getItem('live2d') === null) {
         localStorage.setItem('live2d','right');
         location.reload();
-    } else if (localStorage.getItem('live2d') === 'false') {
-        localStorage.setItem('live2d','right');
-        location.reload();
     } else if (localStorage.getItem('live2d') === 'right') {
         localStorage.setItem('live2d','left');
         location.reload();
     } else if (localStorage.getItem('live2d') === 'left') {
-        localStorage.setItem('live2d','false');
+        localStorage.removeItem('live2d');
         location.reload();
     }
 };
 
 function Live2DWrite() {
     if (localStorage.getItem('live2d') === null) {
-        document.write('关');
-    } else if (localStorage.getItem('live2d') === 'false') {
         document.write('关');
     } else if (localStorage.getItem('live2d') === 'right') {
         document.write('右');
