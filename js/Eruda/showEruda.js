@@ -6,7 +6,7 @@
     }
 })();
 
-(function ErudaJudge() {
+function ErudaJudge() {
     if (localStorage.getItem('eruda') === 'null') {
         localStorage.setItem('eruda','true');
         location.reload();
@@ -17,9 +17,9 @@
         localStorage.setItem('eruda','false');
         location.reload();
     }
-})();
+};
 
-(function ErudaWrite() {
+function ErudaWrite() {
     if (localStorage.getItem('eruda') === 'null') {
         document.write('关');
     } else if (localStorage.getItem('eruda') === 'false') {
@@ -27,4 +27,4 @@
     } else if (localStorage.getItem('eruda') === 'true') {
         document.write('开');
     }
-})();
+};
