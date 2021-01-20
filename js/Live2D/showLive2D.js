@@ -24,7 +24,7 @@ function Live2DJudge() {
     }
 };
 
-function Live2DJudge() {
+function Live2DWrite() {
     if (localStorage.getItem('live2d') === 'null') {
         document.write('关');
     } else if (localStorage.getItem('live2d') === 'false') {
