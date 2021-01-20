@@ -6,7 +6,7 @@
     }
 })();
 
-(function ErudJudge() {
+(function ErudaJudge() {
     let eruda = localStorage.getItem('eruda');
     if (eruda === 'null') {
         localStorage.setItem('eruda','true');
@@ -20,7 +20,7 @@
     }
 })();
 
-(function ErudWrite() {
+(function ErudaWrite() {
     let eruda = localStorage.getItem('eruda');
     if (eruda === 'null') {
         document.write('关');
