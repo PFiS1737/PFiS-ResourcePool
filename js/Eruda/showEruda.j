@@ -7,26 +7,24 @@
 })();
 
 (function ErudaJudge() {
-    let eruda = localStorage.getItem('eruda');
-    if (eruda === 'null') {
+    if (localStorage.getItem('eruda') === 'null') {
         localStorage.setItem('eruda','true');
         location.reload();
-    } else if (eruda === 'false') {
+    } else if (localStorage.getItem('eruda') === 'false') {
         localStorage.setItem('eruda','true');
         location.reload();
-    } else if (eruda === 'true') {
+    } else if (localStorage.getItem('eruda') === 'true') {
         localStorage.setItem('eruda','false');
         location.reload();
     }
 })();
 
 (function ErudaWrite() {
-    let eruda = localStorage.getItem('eruda');
-    if (eruda === 'null') {
+    if (localStorage.getItem('eruda') === 'null') {
         document.write('关');
-    } else if (eruda === 'false') {
+    } else if (localStorage.getItem('eruda') === 'false') {
         document.write('关');
-    } else if (eruda === 'true') {
+    } else if (localStorage.getItem('eruda') === 'true') {
         document.write('开');
     }
 })();
