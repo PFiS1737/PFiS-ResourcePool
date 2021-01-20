@@ -18,8 +18,8 @@ function ErudaJudge() {
 
 function ErudaWrite() {
     if (localStorage.getItem('eruda') === null) {
-        document.write('关');
+        document.write('关闭');
     } else if (localStorage.getItem('eruda') === 'true') {
-        document.write('开');
+        document.write('开启');
     }
 };
