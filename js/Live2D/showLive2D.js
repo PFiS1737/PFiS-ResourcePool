@@ -23,10 +23,10 @@ function Live2DJudge() {
 
 function Live2DWrite() {
     if (localStorage.getItem('live2d') === null) {
-        document.write('关');
+        document.write('关闭');
     } else if (localStorage.getItem('live2d') === 'right') {
-        document.write('右');
+        document.write('右边');
     } else if (localStorage.getItem('live2d') === 'left') {
-        document.write('左');
+        document.write('左边');
     }
 };
