@@ -43,17 +43,18 @@ function getRandom(option) {
 }
 function startSakura() {
     requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
+    var SakuraNumber = localStorage.getItem('sakura');
     var canvas = document.createElement("canvas"),
     cxt;
     staticx = !0,
     canvas.height = window.innerHeight,
     canvas.width = window.innerWidth,
-    canvas.setAttribute("style", "position: fixed;left: 0;top: 0;pointer-events: none;z-index: 999;"), // 避免被其他元素覆盖，并在看板娘(z-index: 1000;)下显示
+    canvas.setAttribute("style", "position: fixed;left: 0;top: 0;pointer-events: none;z-index: 999;"),  // 避免被其他元素覆盖，并在看板娘(z-index: 1000;)下显示
     canvas.setAttribute("id", "canvas_sakura"),
     document.getElementsByTagName("body")[0].appendChild(canvas),
     cxt = canvas.getContext("2d");
     for (var sakuraList = new SakuraList,
-    i = 0; i < 50; i++) {   // "50"为樱花数量
+    i = 0; i < SakuraNumber; i++) {   // "50"为樱花数量
         var sakura, randomX, randomY, randomS, randomR, randomFnx, randomFny;
         randomX = getRandom("x"),
         randomY = getRandom("y"),
