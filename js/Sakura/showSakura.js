@@ -16,8 +16,13 @@ function SakuraJudge() {
     location.reload();
 };
 
-function SakuraUploadData() {
-    
+(function SakuraJudgeStop() {
+    if (localStorage.getItem('sakura') > 100) {
+        localStorage.removeItem('sakura');
+})();
+
+function SakuraGetData() {
+    localStorage.setItem('sakura',Number(document.getElementByName("port11").value));
 };
 
 function SakuraWrite() {
