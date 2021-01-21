@@ -10,7 +10,7 @@ function SakuraJudge() {
         localStorage.setItem('sakura','5');
     } else if (localStorage.getItem('sakura') < 100) {
         localStorage.setItem('sakura',Number(Number(localStorage.getItem('sakura')) + 5));
-    } else if (localStorage.getItem('sakura') === 100) {
+    } else if (localStorage.getItem('sakura') === '100') {
         localStorage.removeItem('sakura');
     }
     location.reload();
