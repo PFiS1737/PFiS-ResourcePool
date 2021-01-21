@@ -1,16 +1,23 @@
 (function SakuraLoad() {
-    if (localStorage.getItem('sakura') !== null) {
+    if (localStorage.getItem('sakura') != null) {
         var src = '//cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/js/Sakura/Sakura.js';
         document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
     }
 })();
 
 function SakuraJudge() {
-    if (localStorage.getItem('sakura') !== null) {
-        var SakuraNumberAdd = Number(localStorage.getItem('sakura') + 1)
-        localStorage.setItem('sakura',SakuraNumberAdd);
+    if (localStorage.getItem('sakura') === null) {
+        localStorage.setItem('sakura','0');
+    } else if (localStorage.getItem('sakura') <= 100) {
+        localStorage.setItem('sakura',Number(Number(localStorage.getItem('sakura')) + 5));
+    } else if (localStorage.getItem('sakura') > 100) {
+        localStorage.removeItem('sakura');
     }
     location.reload();
+};
+
+function SakuraUploadData() {
+    
 };
 
 function SakuraWrite() {
