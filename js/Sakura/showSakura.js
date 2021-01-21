@@ -16,15 +16,7 @@ function SakuraJudge() {
 function SakuraWrite() {
     if (localStorage.getItem('sakura') === null) {
         document.write('关闭');
-    } else if (localStorage.getItem('sakura') === 'few') {
-        document.write('很多');
-    } else if (localStorage.getItem('sakura') === 'more') {
-        document.write('较多');
-    } else if (localStorage.getItem('sakura') === 'half') {
-        document.write('适中');
-    } else if (localStorage.getItem('sakura') === 'less') {
-        document.write('较少');
-    } else if (localStorage.getItem('sakura') === 'few') {
-        document.write('很少');
+    } else if (localStorage.getItem('sakura') !== null) {
+        document.write('数量：' + localStorage.getItem('sakura'));
     }
 };
