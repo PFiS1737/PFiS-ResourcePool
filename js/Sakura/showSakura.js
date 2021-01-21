@@ -22,7 +22,7 @@ function SakuraJudge() {
 })();
 
 function SakuraGetData() {
-    localStorage.setItem('sakura',Number(document.getElementByName("port11").value));
+    localStorage.setItem('sakura',Number(document.getElementByName("SakuraNumber").value));
 };
 
 function SakuraWrite() {
