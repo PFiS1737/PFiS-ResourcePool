@@ -17,6 +17,11 @@ function SakuraChange() { // 切换樱花数量
     location.reload();
 };
 
+function SakuraGetElements() { // 获取樱花数量
+    localStorage.setItem('SakuraNumber',Number(document.getElementsByName("SakuraNumber").value));
+    location.reload();
+};
+
 function SakuraGetMax() { // 获取樱花数量最大值
     localStorage.setItem('SakuraMax',Number(document.getElementsByName("SakuraMax").value));
 };
@@ -27,10 +32,6 @@ function SakuraGetMax() { // 获取樱花数量最大值
         location.reload();
     }
 })();
-
-function SakuraGetElements() { // 获取樱花数量
-    localStorage.setItem('SakuraNumber',Number(document.getElementsByName("SakuraNumber").value));
-};
 
 function SakuraWrite() { // 输出状态
     if (localStorage.getItem('SakuraNumber') === null) {
