@@ -5,7 +5,7 @@
     }
 })();
 
-function SakuraJudge() {
+function SakuraChange() {
     if (localStorage.getItem('sakura') === null) {
         localStorage.setItem('sakura','5');
     } else if (localStorage.getItem('sakura') < 100) {
@@ -16,13 +16,14 @@ function SakuraJudge() {
     location.reload();
 };
 
-(function SakuraJudgeStop() {
+(function SakuraChangeStop() {
     if (localStorage.getItem('sakura') > 100) {
         localStorage.removeItem('sakura');
+    }
 })();
 
-function SakuraGetData() {
-    localStorage.setItem('sakura',Number(document.getElementByName("SakuraNumber").value));
+function SakuraGetElements() {
+    localStorage.setItem('sakura',Number(document.getElementsByName("SakuraNumber").value));
 };
 
 function SakuraWrite() {
