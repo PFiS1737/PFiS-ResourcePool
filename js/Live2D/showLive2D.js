@@ -1,4 +1,4 @@
-(function Live2DLoad() { //加载看板娘
+(function Live2DLoad() { // 加载看板娘
     if (localStorage.getItem('Live2D') === 'right') {
         var src = '//cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/special/autoload_self-customize.js';
         document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
@@ -20,11 +20,11 @@ function Live2DChange() { // 改变看板娘位置
 };
 
 function SakuraGetElements() { // 获取看板娘位置信息（ Live2D 的值）
-    localStorage.setItem('Live2D',Number(document.getElementsByName("Live2D").value));
+    localStorage.setItem('Live2D',document.getElementsByName("Live2D").value);
     location.reload();
 };
 
-(function Live2DStop() { // 非选定值时移除 Live2D
+(function Live2DStop() { // 设置为非选定值时移除 Live2D
     if (localStorage.getItem('Live2D') !== 'right' && localStorage.getItem('Live2D') !== 'left' && localStorage.getItem('Live2D') !== null) {
         localStorage.removeItem('Live2D');
         location.reload();
@@ -34,9 +34,12 @@ function SakuraGetElements() { // 获取看板娘位置信息（ Live2D 的值�
 function Live2DWrite() { // 输出状态
     if (localStorage.getItem('Live2D') === null) {
         document.write('关闭');
+        console.log("Live2D看板娘：关闭");
     } else if (localStorage.getItem('Live2D') === 'right') {
         document.write('右边');
+        console.log("Live2D看板娘：开启；位置：右边");
     } else if (localStorage.getItem('Live2D') === 'left') {
         document.write('左边');
+        console.log("Live2D看板娘：开启；位置：左边");
     }
 };
