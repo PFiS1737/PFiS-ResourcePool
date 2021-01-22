@@ -36,7 +36,9 @@ function SakuraGetMax() { // 获取樱花数量最大值
 function SakuraWrite() { // 输出状态
     if (localStorage.getItem('SakuraNumber') === null) {
         document.write('关闭');
+        console.log("樱花效果：关闭");
     } else if (localStorage.getItem('SakuraNumber') !== null) {
         document.write('数量：' + localStorage.getItem('SakuraNumber'));
+        console.log("樱花效果：开启；樱花数量：" + localStorage.getItem('SakuraNumber'));
     }
 };
