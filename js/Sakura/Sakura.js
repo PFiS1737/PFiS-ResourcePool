@@ -43,7 +43,7 @@ function getRandom(option) {
 }
 function startSakura() {
     requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
-    var SakuraNumber = localStorage.getItem('SakuraNumber');
+    var SakuraNumber = Number(localStorage.getItem('SakuraNumber'));
     var canvas = document.createElement("canvas"),
     cxt;
     staticx = !0,
