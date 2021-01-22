@@ -21,9 +21,10 @@ function SakuraGetMax() { // 获取樱花数量最大值
     localStorage.setItem('SakuraMax',Number(document.getElementsByName("SakuraMax").value));
 };
 
-(function SakuraStop() { // 超过最大值时卸载樱花效果
+(function SakuraStop() { // 超过最大值时移除 SakuraNumber
     if (localStorage.getItem('SakuraNumber') > localStorage.getItem('SakuraMax')) {
         localStorage.removeItem('SakuraNumber');
+        location.reload();
     }
 })();
 
