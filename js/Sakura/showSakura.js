@@ -18,12 +18,12 @@ function SakuraChange() { // 切换樱花数量
 };
 
 function SakuraGetElements() { // 获取樱花数量
-    localStorage.setItem('SakuraNumber',Number(document.getElementsByName("SakuraNumber").value));
+    localStorage.setItem('SakuraNumber',Number(document.getElementById("SakuraNumber").value));
     location.reload();
 };
 
 function SakuraGetMax() { // 获取樱花数量最大值
-    localStorage.setItem('SakuraMax',Number(document.getElementsByName("SakuraMax").value));
+    localStorage.setItem('SakuraMax',Number(document.getElementById("SakuraMax").value));
 };
 
 (function SakuraStop() { // 超过最大值时移除 SakuraNumber
