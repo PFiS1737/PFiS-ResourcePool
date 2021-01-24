@@ -20,7 +20,7 @@ function Live2DChange() { // 改变看板娘位置
 };
 
 function SakuraGetElements() { // 获取看板娘位置信息
-    localStorage.setItem('Live2D',document.getElementsByName("Live2D").value);
+    localStorage.setItem('Live2D',document.getElementById("Live2D").value);
     location.reload();
 };
 
