@@ -43,7 +43,7 @@ function getErudaPlugin() { // 输出状态
         console.log("Eruda调试器：Code Plugin 开启");
     }
     if (document.getElementById("getErudaEdit").checked === 'true') {
-        
+        window.document.designMode = "off";
         console.log("Eruda调试器：Edit Page 开启");
     }
     location.reload();
