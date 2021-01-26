@@ -23,23 +23,27 @@ function changeEruda() { // 开启/关闭
 
 function getErudaPlugin() { // 输出状态
     if (document.getElementById("getErudaDom").checked === 'true') {
-        document.write('关闭');
+        var src = '//cdn.jsdelivr.net/npm/eruda-dom@2.0.0';
+        document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
         console.log("Eruda调试器：Dom Plugin 开启");
     }
     if (document.getElementById("getErudaFps").checked === 'true') {
-        document.write('开启');
+        var src = '//cdn.jsdelivr.net/npm/eruda-fps@2.0.0';
+        document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
         console.log("Eruda调试器：Fps Plugin 开启");
     }
     if (document.getElementById("getErudaTiming").checked === 'true') {
-        document.write('开启');
+        var src = '//cdn.jsdelivr.net/npm/eruda-timing@2.0.0';
+        document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
         console.log("Eruda调试器：Timing Plugin 开启");
     }
     if (document.getElementById("getErudaCode").checked === 'true') {
-        document.write('开启');
+        var src = '//cdn.jsdelivr.net/npm/eruda-code@2.0.0';
+        document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
         console.log("Eruda调试器：Code Plugin 开启");
     }
     if (document.getElementById("getErudaEdit").checked === 'true') {
-        document.write('开启');
+        
         console.log("Eruda调试器：Edit Page 开启");
     }
     location.reload();
