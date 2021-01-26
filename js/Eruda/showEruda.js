@@ -22,23 +22,23 @@ function changeEruda() { // 开启/关闭
 })();
 
 function getErudaPlugin() { // 输出状态
-    if (document.getElementById("getErudaDom").indeterminate === 'true') {
+    if (document.getElementById("getErudaDom").checked === 'true') {
         document.write('关闭');
         console.log("Eruda调试器：Dom Plugin 开启");
-    } else if (document.getElementById("getErudaFps").indeterminate === 'true') {
+    } else if (document.getElementById("getErudaFps").checked === 'true') {
         document.write('开启');
         console.log("Eruda调试器：Fps Plugin 开启");
-    } else if (document.getElementById("getErudaTiming").indeterminate === 'true') {
+    } else if (document.getElementById("getErudaTiming").checked === 'true') {
         document.write('开启');
         console.log("Eruda调试器：Timing Plugin 开启");
-    } else if (document.getElementById("getErudaCode").indeterminate === 'true') {
+    } else if (document.getElementById("getErudaCode").checked === 'true') {
         document.write('开启');
         console.log("Eruda调试器：Code Plugin 开启");
-    } else if (document.getElementById("getErudaEdit").indeterminate === 'true') {
+    } else if (document.getElementById("getErudaEdit").checked === 'true') {
         document.write('开启');
         console.log("Eruda调试器：Edit Page 开启");
     }
-};
+};checked
 
 function writeEruda() { // 输出状态
     if (localStorage.getItem('Eruda') !== 'true') {
