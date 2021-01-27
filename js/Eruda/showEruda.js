@@ -10,6 +10,7 @@
     if (localStorage.getItem('Eruda') !== 'true' && localStorage.getItem('Eruda') !== null) {
         localStorage.removeItem('Eruda');
         location.reload();
+    }
 })();
 
 function changeEruda() { // 通过点击开关
@@ -32,28 +33,39 @@ function writeEruda() { // 输出状态
 };
 
 function getEruda() { // 获取设置
-    if (document.getElementById("getErudaDom").value === 'true') {
+    if (document.getElementById("getEruda").value === true) {
         localStorage.setItem('Eruda','true');
-    } else if (document.getElementById("getErudaDom").value === 'false') {
+    } else if (document.getElementById("getEruda").value === false) {
         localStorage.removeItem('Eruda');
     }
+    location.reload();
 };
 
 function getErudaPlugin() { // 获取插件设置
-    if (document.getElementById("getErudaDom").checked === 'true') {
+    if (document.getElementById("getErudaDom").checked === true) {
         localStorage.setItem('ErudaDom','true');
+    } else {
+        localStorage.removeItem('ErudaDom');
     }
-    if (document.getElementById("getErudaFps").checked === 'true') {
+    if (document.getElementById("getErudaFps").checked === true) {
         localStorage.setItem('ErudaFps','true');
+    } else {
+        localStorage.removeItem('ErudaFps');
     }
-    if (document.getElementById("getErudaTiming").checked === 'true') {
+    if (document.getElementById("getErudaTiming").checked === true) {
         localStorage.setItem('ErudaTiming','true');
+    } else {
+        localStorage.removeItem('ErudaTiming');
     }
-    if (document.getElementById("getErudaCode").checked === 'true') {
+    if (document.getElementById("getErudaCode").checked === true) {
         localStorage.setItem('ErudaCode','true');
+    } else {
+        localStorage.removeItem('ErudaCode');
     }
-    if (document.getElementById("getErudaEdit").checked === 'true') {
+    if (document.getElementById("getErudaEdit").checked === true) {
         localStorage.setItem('ErudaEdit','true');
+    } else {
+        localStorage.removeItem('ErudaEdit');
     }
     location.reload();
 };
@@ -63,29 +75,39 @@ function getErudaPlugin() { // 获取插件设置
         var src = '//cdn.jsdelivr.net/npm/eruda-dom@2.0.0';
         document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
         console.log("Eruda调试器：Dom Plugin 开启");
-        document.getElementById("getErudaDom").checked = 'true'
+        document.getElementById("getErudaDom").checked = 'true';
+    } else {
+        document.getElementById("getErudaDom").checked = 'false';
     }
     if (localStorage.getItem('ErudaFps') === 'true') {
         var src = '//cdn.jsdelivr.net/npm/eruda-fps@2.0.0';
         document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
         console.log("Eruda调试器：Fps Plugin 开启");
-        document.getElementById("getErudaFps").checked = 'true'
+        document.getElementById("getErudaFps").checked = 'true';
+    } else {
+        document.getElementById("getErudaFps").checked = 'false';
     }
     if (localStorage.getItem('ErudaTiming') === 'true') {
         var src = '//cdn.jsdelivr.net/npm/eruda-timing@2.0.0';
         document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
         console.log("Eruda调试器：Timing Plugin 开启");
-        document.getElementById("getErudaDoTiming").checked = 'true'
+        document.getElementById("getErudaDoTiming").checked = 'true';
+    } else {
+        document.getElementById("getErudaTiming").checked = 'false';
     }
     if (localStorage.getItem('ErudaCode') === 'true') {
         var src = '//cdn.jsdelivr.net/npm/eruda-code@2.0.0';
         document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
         console.log("Eruda调试器：Code Plugin 开启");
-        document.getElementById("getErudaCode").checked = 'true'
+        document.getElementById("getErudaCode").checked = 'true';
+    } else {
+        document.getElementById("getErudaCode").checked = 'false';
     }
     if (localStorage.getItem('ErudaEdit') === 'true') {
         document.body.contentEditable='true';
         console.log("Eruda调试器：Edit Page 开启");
-        document.getElementById("getErudaEdit").checked = 'true'
+        document.getElementById("getErudaEdit").checked = 'true';
+    } else {
+        document.getElementById("getErudaEdit").checked = 'false';
     }
 })();
