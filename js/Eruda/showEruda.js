@@ -33,9 +33,9 @@ function writeEruda() { // 输出状态
 };
 
 function getEruda() { // 获取设置
-    if (document.getElementById("getEruda").value === true) {
+    if (document.getElementById("getEruda").value === 'true') {
         localStorage.setItem('Eruda','true');
-    } else if (document.getElementById("getEruda").value === false) {
+    } else if (document.getElementById("getEruda").value === 'false') {
         localStorage.removeItem('Eruda');
     }
     location.reload();
