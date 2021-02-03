@@ -41,6 +41,7 @@ function getEruda() { // 获取设置
     location.reload();
 };
 
+/* 
 function getErudaPlugin() { // 获取插件设置
     if (document.getElementById("getErudaDom").checked === true) {
         localStorage.setItem('ErudaDom','true');
@@ -111,3 +112,4 @@ function getErudaPlugin() { // 获取插件设置
         document.getElementById("getErudaEdit").checked = 'false';
     }
 })();
+*/
