@@ -71,7 +71,7 @@ function getErudaPlugin() { // 获取插件设置
     location.reload();
 };
 
-(function loadErudaPlugin() { // 输出插件状态并加载插件
+(function loadErudaPlugin() { // 在控制台输出插件状态并加载插件
     if (localStorage.getItem('ErudaDom') === 'true') {
         var src = '//cdn.jsdelivr.net/npm/eruda-dom@2.0.0';
         document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
@@ -112,4 +112,18 @@ function getErudaPlugin() { // 获取插件设置
         document.getElementById("getErudaEdit").checked = 'false';
     }
 })();
+
+function writeErudaPlugin(PluginName) { // 输出插件状态
+    if (PluginName = 'Dom') {
+        document.write(localStorage.setItem('ErudaDom'));
+    } else if (PluginName = 'Fps') {
+        document.write(localStorage.setItem('ErudaFps'));
+    } else if (PluginName = 'Timing') {
+        document.write(localStorage.setItem('ErudaTiming'));
+    } else if (PluginName = 'Code') {
+        document.write(localStorage.setItem('ErudaCode'));
+    } else if (PluginName = 'Edit') {
+        document.write(localStorage.setItem('ErudaEdit'));
+    }
+};
 */
