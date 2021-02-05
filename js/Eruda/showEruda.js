@@ -41,6 +41,7 @@ function getEruda() { // 获取设置
     location.reload();
 };
 
+/* 
 function getErudaPlugin() { // 获取插件设置
     if (document.getElementById("getErudaDom").checked === true) {
         localStorage.setItem('ErudaDom','true');
@@ -129,3 +130,4 @@ function writeErudaPlugin(PluginName) { // 输出插件状态
         document.write(localStorage.setItem('ErudaEdit'));
     }
 };
+*/
