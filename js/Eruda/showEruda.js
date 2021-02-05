@@ -41,7 +41,6 @@ function getEruda() { // 获取设置
     location.reload();
 };
 
-/* 
 function getErudaPlugin() { // 获取插件设置
     if (document.getElementById("getErudaDom").checked === true) {
         localStorage.setItem('ErudaDom','true');
@@ -75,6 +74,7 @@ function getErudaPlugin() { // 获取插件设置
     if (localStorage.getItem('ErudaDom') === 'true') {
         var src = '//cdn.jsdelivr.net/npm/eruda-dom@2.0.0';
         document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+        eruda.add(erudaDom);
         console.log("Eruda调试器：Dom Plugin 开启");
         document.getElementById("getErudaDom").checked = 'true';
     } else {
@@ -83,6 +83,7 @@ function getErudaPlugin() { // 获取插件设置
     if (localStorage.getItem('ErudaFps') === 'true') {
         var src = '//cdn.jsdelivr.net/npm/eruda-fps@2.0.0';
         document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+        eruda.add(erudaFps);
         console.log("Eruda调试器：Fps Plugin 开启");
         document.getElementById("getErudaFps").checked = 'true';
     } else {
@@ -91,6 +92,7 @@ function getErudaPlugin() { // 获取插件设置
     if (localStorage.getItem('ErudaTiming') === 'true') {
         var src = '//cdn.jsdelivr.net/npm/eruda-timing@2.0.0';
         document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+        eruda.add(erudaTiming);
         console.log("Eruda调试器：Timing Plugin 开启");
         document.getElementById("getErudaDoTiming").checked = 'true';
     } else {
@@ -99,6 +101,7 @@ function getErudaPlugin() { // 获取插件设置
     if (localStorage.getItem('ErudaCode') === 'true') {
         var src = '//cdn.jsdelivr.net/npm/eruda-code@2.0.0';
         document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+        eruda.add(erudaCode);
         console.log("Eruda调试器：Code Plugin 开启");
         document.getElementById("getErudaCode").checked = 'true';
     } else {
@@ -126,4 +129,3 @@ function writeErudaPlugin(PluginName) { // 输出插件状态
         document.write(localStorage.setItem('ErudaEdit'));
     }
 };
-*/
