@@ -12,7 +12,7 @@
 	position: fixed;
 	transition: margin-right 1s;
 	width: 60px;
-  writing-mode: vertical-lr;
+	writing-mode: vertical-lr;
 	z-index: 1000;
 }
 
