@@ -37,11 +37,12 @@ function getLive2D() { // 获取看板娘信息
 (function removeLive2D() { // 不是指定值时移除
     if (localStorage.getItem('Live2DPlace') !== 'right' && localStorage.getItem('Live2DPlace') !== 'left' && localStorage.getItem('Live2DPlace') !== null) {
         localStorage.removeItem('Live2DPlace');
+        location.reload();
     }
     if (localStorage.getItem('Live2D') !== 'true' && localStorage.getItem('Live2D') !== null) {
         localStorage.removeItem('Live2D');
+        location.reload();
     }
-    location.reload();
 })();
 
 function writeLive2D() { // 输出状态
