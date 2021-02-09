@@ -1,14 +1,14 @@
-(function Live2DLoad() { // 加载看板娘
-    if (localStorage.getItem('Live2D') === 'right') {
+(function loadLive2D() { // 加载看板娘
+    if (localStorage.getItem('Live2D') === 'true' && localStorage.getItem('Live2DPlace') === 'right') {
         var src = '//cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/special/autoload_self-customize.js';
         document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
-    } else if (localStorage.getItem('Live2D') === 'left') {
+    } else if (localStorage.getItem('Live2D') === 'true' && localStorage.getItem('Live2DPlace') === 'left') {
         var src = '//cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/special/autoload_self-customize_left.js';
         document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
     }
 })();
 
-function Live2DChange() { // 改变看板娘位置
+function changeLive2D() { // 改变看板娘位置
     if (localStorage.getItem('Live2D') === null) {
         localStorage.setItem('Live2D','right');
     } else if (localStorage.getItem('Live2D') === 'right') {
@@ -19,13 +19,18 @@ function Live2DChange() { // 改变看板娘位置
     location.reload();
 };
 
-function SakuraGetElements() { // 获取看板娘位置信息
+function getLive2D() { // 获取看板娘信息
     localStorage.setItem('Live2D',document.getElementById("Live2D").value);
+    localStorage.setItem('Live2DPlace',document.getElementById("Live2DPlace").value);
     location.reload();
 };
 
-(function Live2DStop() { // 设置为非选定值时移除 Live2D
-    if (localStorage.getItem('Live2D') !== 'right' && localStorage.getItem('Live2D') !== 'left' && localStorage.getItem('Live2D') !== null) {
+(function removeLive2D() { // 不是指定值时移除
+    if (localStorage.getItem('Live2DPlace') !== 'right' && localStorage.getItem('Live2DPlace') !== 'left' && localStorage.getItem('Live2DPlace') !== null) {
+        localStorage.removeItem('Live2DPlace');
+        location.reload();
+    }
+    if (localStorage.getItem('Live2D') !== 'true' && localStorage.getItem('Live2D') !== null) {
         localStorage.removeItem('Live2D');
         location.reload();
     }
