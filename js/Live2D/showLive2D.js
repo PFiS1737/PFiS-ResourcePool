@@ -8,13 +8,22 @@
     }
 })();
 
-function changeLive2D() { // 改变看板娘位置
+function changeLive2D() { // 通过按钮设置
     if (localStorage.getItem('Live2D') === null) {
-        localStorage.setItem('Live2D','right');
-    } else if (localStorage.getItem('Live2D') === 'right') {
-        localStorage.setItem('Live2D','left');
-    } else if (localStorage.getItem('Live2D') === 'left') {
+        localStorage.setItem('Live2D','true');
+    } else if (localStorage.getItem('Live2D') === 'true') {
         localStorage.removeItem('Live2D');
+    }
+    location.reload();
+};
+
+function changeLive2DPlace() { // 通过按钮设置位置
+    if (localStorage.getItem('Live2DPlace') === null) {
+        localStorage.setItem('Live2DPlace','right');
+    } else if (localStorage.getItem('Live2DPlace') === 'right') {
+        localStorage.setItem('Live2DPlace','left');
+    } else if (localStorage.getItem('Live2DPlace') === 'left') {
+        localStorage.removeItem('Live2DPlace');
     }
     location.reload();
 };
@@ -36,14 +45,14 @@ function getLive2D() { // 获取看板娘信息
     }
 })();
 
-function Live2DWrite() { // 输出状态
+function writeLive2D() { // 输出状态
     if (localStorage.getItem('Live2D') === null) {
         document.write('关闭');
         console.log("Live2D看板娘：关闭");
-    } else if (localStorage.getItem('Live2D') === 'right') {
+    } else if (localStorage.getItem('Live2D') === 'true' && localStorage.getItem('Live2DPlace') === 'right') {
         document.write('右边');
         console.log("Live2D看板娘：开启；位置：右边");
-    } else if (localStorage.getItem('Live2D') === 'left') {
+    } else if (localStorage.getItem('Live2D') === 'true' && localStorage.getItem('Live2DPlace') === 'left') {
         document.write('左边');
         console.log("Live2D看板娘：开启；位置：左边");
     }
