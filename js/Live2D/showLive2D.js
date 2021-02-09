@@ -11,6 +11,7 @@
 function changeLive2D() { // 通过按钮设置
     if (localStorage.getItem('Live2D') === null) {
         localStorage.setItem('Live2D','true');
+        localStorage.setItem('Live2DPlace','right');
     } else if (localStorage.getItem('Live2D') === 'true') {
         localStorage.removeItem('Live2D');
     }
