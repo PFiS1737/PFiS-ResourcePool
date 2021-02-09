@@ -13,7 +13,7 @@
     }
 })();
 
-function changeEruda() { // 通过点击开关
+function changeEruda() { // 通过按钮设置
     if (localStorage.getItem('Eruda') !== 'true') {
         localStorage.setItem('Eruda','true');
     } else if (localStorage.getItem('Eruda') === 'true') {
