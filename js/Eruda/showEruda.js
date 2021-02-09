@@ -38,12 +38,7 @@ function getEruda() { // 获取设置
     } else {
         localStorage.removeItem('Eruda');
     }
-    location.reload();
-};
-
-/* 
-function getErudaPlugin() { // 获取插件设置
-    if (document.getElementById("getErudaDom").checked === true) {
+    /* if (document.getElementById("getErudaDom").checked === true) {
         localStorage.setItem('ErudaDom','true');
     } else {
         localStorage.removeItem('ErudaDom');
@@ -67,10 +62,11 @@ function getErudaPlugin() { // 获取插件设置
         localStorage.setItem('ErudaEdit','true');
     } else {
         localStorage.removeItem('ErudaEdit');
-    }
+    } */
     location.reload();
 };
 
+/* 
 (function loadErudaPlugin() { // 在控制台输出插件状态并加载插件
     if (localStorage.getItem('ErudaDom') === 'true') {
         var src = '//cdn.jsdelivr.net/npm/eruda-dom@2.0.0';
