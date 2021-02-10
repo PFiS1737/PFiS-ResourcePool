@@ -24,16 +24,6 @@
 </head>
 <body class="mdui-theme-primary-indigo mdui-theme-accent-pink" style="background-color: black;">
 
-<script>
-    var haveChromeColor = (document.getElementsByName('theme-color').length > 0);
-    if (sessionStorage.getItem('ns_night-styles') === "true") {
-        document.getElementsByTagName('body')[0].className += " mdui-theme-layout-dark";
-        if (haveChromeColor) {
-            document.getElementsByName('theme-color')[0].setAttribute("content", "#212121")
-        }
-    }
-</script>
-
 <div class="mdui-toolbar mdui-color-theme">
     <a mdui-drawer="{target: '#menu',overlay:true}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
     <span class="mdui-typo-title">Live2D 设置</span>
