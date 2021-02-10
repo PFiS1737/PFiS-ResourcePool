@@ -1,4 +1,5 @@
-document.write(`
+function menu() {
+    document.write(`
 <div class="mdui-toolbar mdui-color-theme">
     <a mdui-drawer="{target: '#menu',overlay:true}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
     <span class="mdui-typo-title">Eruda 设置</span>
@@ -39,4 +40,5 @@ document.write(`
         </ul>
     </nav>
 </div>
-`)
+    `)
+}
