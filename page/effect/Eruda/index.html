@@ -1,70 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Eruda 设置 - PFiS</title>
-  <!--MDUI CSS-->
+  <!--MDUI-->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"/>
+  <script src="//cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"></script>
   <!--Font Awesome-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <!--Mdx CSS-->
-  <link rel="stylesheet" id="mdx_style_css-css" href="http://pfis.infinityfreeapp.com/wp-content/themes/mdx/style.css?ver=2.0.0.1ae12d6" type="text/css" media="all">
-  <link rel="stylesheet" id="mdx_md2-css" href="http://pfis.infinityfreeapp.com/wp-content/themes/mdx/css/md2.css?ver=2.0.0.1ae12d6" type="text/css" media="all">
-  <!--Page CSS-->
-  <link rel="stylesheet" href="//pfis.infinityfreeapp.com/effects/page-effects.css"/>
+  <!--Mdx-->
+  <link rel="stylesheet" href="http:/wp-content/themes/mdx/style.css?ver=2.0.0.1ae12d6">
+  <link rel="stylesheet" href="http:/wp-content/themes/mdx/css/md2.css?ver=2.0.0.1ae12d6">
+  <!--Page-->
+  <link rel="stylesheet" href="/effect/main.css">
+  <script src="/effect/main.js"></script>
   <!--Eruda-->
-  <script src="//pfis.infinityfreeapp.com/effects/Eruda/showEruda.js"></script>
+  <script src="/effect/Eruda/showEruda.js"></script>
   <!--Live2D-->
-  <script src="//pfis.infinityfreeapp.com/effects/Live2D/showLive2D.js"></script>  
+  <script src="/effect/Live2D/showLive2D.js"></script>
   <!--Sakura-->
-  <script src="//cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/js/Sakura/showSakura.js"></script>
-  <!--MDUI JavaScript-->
-  <script src="//cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"></script>
+  <script src="/effect/Live2D/showSakura.js"></script>
+  <!--Snow-->
+  <script src="/effect/Live2D/showSnow.js"></script>
+  <!--Rian-->
+  <script src="/effect/Live2D/showRian.js"></script>
+  <!--Heimu-->
+  <script src="/effect/Live2D/showHeimu.js"></script>
+  <link rel="stylesheet" href="/effect/Heimu/Heimu.css">
 </head>
+
 <body class="mdui-theme-primary-indigo mdui-theme-accent-pink" style="background-color: black;">
-
-<div class="mdui-toolbar mdui-color-theme">
-    <a mdui-drawer="{target: '#menu',overlay:true}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
-    <span class="mdui-typo-title">Eruda 设置</span>
-    <div class="mdui-toolbar-spacer"></div>
-    <a href="javascript:location.reload();" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
-</div>
-<div class="mdui-drawer mdui-drawer-close mdui-drawer-full-height mdui-color-white" id="menu">
-    <div class="sideImg mdui-color-theme">
-        <div class="mdx-side-lazyload mdx-bg-loaded image"></div>
-        <div class="side-info-more">PFiS<br><span class="side-info-oth">页面特效设置</span></div>
-    </div>
-    <nav role="navigation">
-        <ul class="mdui-list">
-            <li class="mdui-list-item mdui-ripple" style="height: 48px;">
-                <a href="/" style="display: flex; width: 100%;">
-                    <i class="mdui-list-item-icon mdui-text-color-black-icon mdui-icon material-icons" style="margin: 12px 0px;">home</i>
-                    <div class="mdui-list-item-content mdui-text-color-black-text" style="margin-left: 30px">首页</div>
-                </a>
-            </li>
-            <li class="mdui-list-item mdui-list-item-active mdui-ripple" style="height: 48px;">
-                <a href="/effects/Eruda" style="display: flex; width: 100%;">
-                    <i class="mdui-list-item-icon mdui-text-color-black-icon mdui-icon material-icons" style="margin: 12px 0px;">build</i>
-                    <div class="mdui-list-item-content mdui-text-color-black-text" style="margin-left: 30px">Eruda 设置</div>
-                </a>
-            </li>
-            <li class="mdui-list-item mdui-ripple" style="height: 48px;">
-                <a href="/effects/Live2D" style="display: flex; width: 100%;">
-                    <i class="mdui-list-item-icon mdui-text-color-black-icon mdui-icon material-icons" style="margin: 12px 0px;">build</i>
-                    <div class="mdui-list-item-content mdui-text-color-black-text" style="margin-left: 30px">Live2D 设置</div>
-                </a>
-            </li>
-            <li class="mdui-list-item mdui-ripple" style="height: 48px;">
-                <a href="/effects/Sakura" style="display: flex; width: 100%;">
-                    <i class="mdui-list-item-icon mdui-text-color-black-icon mdui-icon material-icons" style="margin: 12px 0px;">build</i>
-                    <div class="mdui-list-item-content mdui-text-color-black-text" style="margin-left: 30px">Sakura 设置</div>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</div>
-
+<script>MENU</script>
 <div class="block-main">
     <div class="title mdui-text-color-indigo">
         <h1 class="title">当前状态：<script>writeEruda()</script></h1>
@@ -199,6 +167,6 @@
         </div>
     </div>
 </div>
-
 </body>
+
 </html>
