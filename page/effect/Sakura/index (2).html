@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sakura 设置 - PFiS</title>
+  <!--MDUI CSS-->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"/>
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <!--Mdx CSS-->
+  <link rel="stylesheet" id="mdx_style_css-css" href="http://pfis.infinityfreeapp.com/wp-content/themes/mdx/style.css?ver=2.0.0.1ae12d6" type="text/css" media="all">
+  <link rel="stylesheet" id="mdx_md2-css" href="http://pfis.infinityfreeapp.com/wp-content/themes/mdx/css/md2.css?ver=2.0.0.1ae12d6" type="text/css" media="all">
+  <!--Page CSS-->
+  <link rel="stylesheet" href="//pfis.infinityfreeapp.com/effects/page-effects.css"/>
+  <!--Eruda-->
+  <script src="//cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/js/Eruda/showEruda.js"></script>
+  <!--Live2D-->
+  <script src="//cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/js/Live2D/showLive2D.js"></script>
+  <!--Sakura-->
+  <script src="//cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/js/Sakura/showSakura.js"></script>
+  <!--MDUI JavaScript-->
+  <script src="//cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"></script>
+</head>
+<body class="mdui-theme-primary-indigo mdui-theme-accent-pink" style="background-color: black;">
+
+<script>
+    var haveChromeColor = (document.getElementsByName('theme-color').length > 0);
+    if (sessionStorage.getItem('ns_night-styles') === "true") {
+        document.getElementsByTagName('body')[0].className += " mdui-theme-layout-dark";
+        if (haveChromeColor) {
+            document.getElementsByName('theme-color')[0].setAttribute("content", "#212121")
+        }
+    }
+</script>
+
+<div class="mdui-toolbar mdui-color-theme">
+    <a mdui-drawer="{target: '#menu',overlay:true}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+    <span class="mdui-typo-title">Sakura 设置</span>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:location.reload();" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
+</div>
+<div class="mdui-drawer mdui-drawer-close mdui-drawer-full-height mdui-color-white" id="menu">
+    <div class="sideImg mdui-color-theme">
+        <div class="mdx-side-lazyload mdx-bg-loaded image"></div>
+        <div class="side-info-more">PFiS<br><span class="side-info-oth">页面特效设置</span></div>
+    </div>
+    <nav role="navigation">
+        <ul class="mdui-list">
+            <li class="mdui-list-item mdui-ripple" style="height: 48px;">
+                <a href="/" style="display: flex; width: 100%;">
+                    <i class="mdui-list-item-icon mdui-text-color-black-icon mdui-icon material-icons" style="margin: 12px 0px;">home</i>
+                    <div class="mdui-list-item-content mdui-text-color-black-text" style="margin-left: 30px">首页</div>
+                </a>
+            </li>
+            <li class="mdui-list-item mdui-ripple" style="height: 48px;">
+                <a href="/effects/Eruda" style="display: flex; width: 100%;">
+                    <i class="mdui-list-item-icon mdui-text-color-black-icon mdui-icon material-icons" style="margin: 12px 0px;">build</i>
+                    <div class="mdui-list-item-content mdui-text-color-black-text" style="margin-left: 30px">Eruda 设置</div>
+                </a>
+            </li>
+            <li class="mdui-list-item mdui-ripple" style="height: 48px;">
+                <a href="/effects/Live2D" style="display: flex; width: 100%;">
+                    <i class="mdui-list-item-icon mdui-text-color-black-icon mdui-icon material-icons" style="margin: 12px 0px;">build</i>
+                    <div class="mdui-list-item-content mdui-text-color-black-text" style="margin-left: 30px">Live2D 设置</div>
+                </a>
+            </li>
+            <li class="mdui-list-item mdui-list-item-active mdui-ripple" style="height: 48px;">
+                <a href="/effects/Sakura" style="display: flex; width: 100%;">
+                    <i class="mdui-list-item-icon mdui-text-color-black-icon mdui-icon material-icons" style="margin: 12px 0px;">build</i>
+                    <div class="mdui-list-item-content mdui-text-color-black-text" style="margin-left: 30px">Sakura 设置</div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="block-main">
+    <div class="title mdui-text-color-indigo">
+        <h1 class="title">当前状态：<script>SakuraWrite()</script></h1>
+    </div>
+    <div class="panel">
+        <div class="mdui-container">
+            <div class="mdui-tab mdui-tab-full-width" mdui-tab>
+                <a href="#tab1" class="mdui-ripple">通过按钮</a>
+                <a href="#tab2" class="mdui-ripple">通过数据</a>
+            </div>
+            <div id="tab1" class="mdui-p-a-2">
+                <div class="block">
+                    <div class="block-long">
+                        <p style="margin: 10px 0px;">关闭 / 开启</p>
+                    </div>
+                    <div class="block-short">
+                        <button class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="SakuraJudge()">点击</button>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="block-long">
+                        <p style="margin: 10px 0px">+5</p>
+                    </div>
+                    <div class="block-short">
+                        <button class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="">点击</button>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="block-long">
+                        <p style="margin: 10px 0px">–5</p>
+                    </div>
+                    <div class="block-short">
+                        <button class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="">点击</button>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="block-long">
+                        <p style="margin: 10px 0px">+10</p>
+                    </div>
+                    <div class="block-short">
+                        <button class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="">点击</button>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="block-long">
+                        <p style="margin: 10px 0px">–10</p>
+                    </div>
+                    <div class="block-short">
+                        <button class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="">点击</button>
+                    </div>
+                </div>
+            </div>
+            <div id="tab2" class="mdui-p-a-2">
+                <div class="block">
+                    <div class="block-long">                
+                        <div class="mdui-textfield" style="width: 300px; padding: 0px;">
+                            <input class="mdui-textfield-input" type="text" placeholder="false / lot / more / half / less / few" id="Sakura" required />
+                        </div>
+                    </div>
+                    <div class="block-short">
+                        <button class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="">确定</button>
+                    </div>
+                </div>
+                <div class="block mdui-typo">
+                    <h2 class="mdui-text-color-indigo" style="margin: 12px 0px 2px 0px; height: 22px;">预选设置：<small>设置 Sakura 数量</small></h2>
+                </div>
+                <div class="block" style="margin-bottom: 0px !important;">
+                    <div class="block-shorter"></div>
+                    <label class="mdui-slider mdui-slider-discrete">
+                        <input type="range" step="1" min="0" max="100" value="50" id="getSakuraNumber"/>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
