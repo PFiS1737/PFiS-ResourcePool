@@ -115,15 +115,15 @@ function getEruda() { // 获取设置
 
 function writeErudaPlugin(PluginName) { // 输出插件状态
     if (PluginName = 'Dom') {
-        document.write(localStorage.setItem('ErudaDom'));
+        document.write(localStorage.getItem('ErudaDom'));
     } else if (PluginName = 'Fps') {
-        document.write(localStorage.setItem('ErudaFps'));
+        document.write(localStorage.getItem('ErudaFps'));
     } else if (PluginName = 'Timing') {
-        document.write(localStorage.setItem('ErudaTiming'));
+        document.write(localStorage.getItem('ErudaTiming'));
     } else if (PluginName = 'Code') {
-        document.write(localStorage.setItem('ErudaCode'));
+        document.write(localStorage.getItem('ErudaCode'));
     } else if (PluginName = 'Edit') {
-        document.write(localStorage.setItem('ErudaEdit'));
+        document.write(localStorage.getItem('ErudaEdit'));
     }
 };
 */
