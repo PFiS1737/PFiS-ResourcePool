@@ -1,0 +1,67 @@
+div.block-main {
+    height: 600px;
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -350px;
+}
+
+div.panel {
+    background-color: white;
+    height: 500px;
+    width: 700px;
+    border-radius: 50px;
+}
+
+div.title {
+    background-color: white;
+    height: 80px;
+    width: 500px;
+    border-radius: 50px;
+    margin: 0px 100px 20px 100px;
+}
+
+h1.title {
+    height: 30px;
+    width: 210px;
+    padding: 25px 145px;
+    margin: 0px;
+}
+
+div.block {
+    display: flex;
+    margin-bottom: 10px;
+    height: 36px !important;
+}
+
+div.block-long {
+    width: 522px;
+    height: 36px;
+}
+
+div.block-short {
+    width: 88px;
+    height: 36px;
+}
+
+div.block-shorter {
+    width: 44px;
+    height: 36px;
+}
+
+div.block-yes {
+    right: 45px;
+    bottom: 45px;
+    position: absolute;
+}
+
+div.image {
+    background-image: url("https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images?name=menu");
+    height: 200px;
+}
+
+div.pfis.block-tab-2 {
+    height: 394px;
+}
