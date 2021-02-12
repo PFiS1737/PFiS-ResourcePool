@@ -93,7 +93,16 @@ function loadWidget(config) {
 				document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
 			}, 3000);
 		});
-		// 到这结束
+		document.querySelector("#waifu-tool .fa-chevron-right").addEventListener("click", () => { // 切换看板娘位置（左 / 右）
+			localStorage.setItem("Live2DPlace", right);
+			showMessage("耶，可以去右边了呢～。", 2000, 11);
+			document.getElementById("waifu").style.bottom = "-500px";
+			var live2d_rightCSS = "/effect/Live2D/live2d-widget/waifu_right.css/"; // 显示在右边时的CSS
+			setTimeout(() => {
+				document.getElementById("live2d_css").setAttribute("href",live2d_rightCSS);
+			}, 3000);
+                        setTimeout('document.getElementById("waifu").style.bottom = "0px"',3000)
+		}); // 到这结束
 		const devtools = () => { };
 		console.log("%c", devtools);
 		devtools.toString = () => {
