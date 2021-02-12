@@ -1,6 +1,6 @@
 // 注意：live2d_path 参数应使用绝对路径
-const live2d_path = "https://cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/";
-// const live2d_path = "/effect/Live2D/live2d-widget/";
+// const live2d_path = "https://cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/";
+const live2d_path = "/effect/Live2D/live2d-widget/";
 
 // 封装异步加载资源的方法
 function loadExternalResource(url, type) {
@@ -47,8 +47,7 @@ if (screen.width >= 768) {
 
 // 看板娘位置 
 if (localStorage.getItem("Live2DPlace") === "right") {
-	var live2d_rightCSS = "/effect/Live2D/live2d-widget/waifu_right.css"; // 显示在右边时的CSS
-	document.getElementById("live2d_css").setAttribute("href",live2d_rightCSS);
+	document.getElementById("live2d_css").setAttribute("href", live2d_path + "waifu_right.css");
 }
 
 console.log(`
