@@ -29,7 +29,15 @@ function loadWidget(config) {
 				<span class="fa fa-lg fa-camera-retro"></span>
 				<span class="fa fa-lg fa-info-circle"></span>
 				<span class="fa fa-lg fa-times"></span>
-				<span class="fa fa-lg fa-chevron-right"></span>
+                                <script>
+                                	(function () {
+                                        	if (localStorage.getItem("Live2DPlace") === "left") {
+                                                	document.write('<span class="fa fa-lg fa-chevron-right"></span>')
+                                                } else if (localStorage.getItem("Live2DPlace") === "right") {
+                                              		document.write('<span class="fa fa-lg fa-chevron-left"></span>')
+                                                }
+                                	})();
+                                </script>
 			</div>
 		</div>`);
 	// 工具栏菜单列表，与实际顺序相同，由于最终会插入到网页中，需用<!--text-->注释
