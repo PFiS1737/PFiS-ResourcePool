@@ -4,17 +4,7 @@
  * https://github.com/PFiS1737/PFiS_Public_Repository/tree/main/live2d
  */
 
-window.onload = function Live2DPlace() {
-   if (localStorage.getItem("Live2DPlace") === "left") {
-        var tag = document.createElement("span");
-        tag.setAttribute("class", "fa fa-lg fa-chevron-right");
-        document.getElementById("waifu-tool").appendChild(tag);
-    } else if (localStorage.getItem("Live2DPlace") === "right") {
-        var tag = document.createElement("span");
-        tag.setAttribute("class", "fa fa-lg fa-chevron-left");
-        document.getElementById("waifu-tool").appendChild(tag);
-    }
-};
+const live2d_path = "/effect/Live2D/live2d-widget/";
 
 function loadWidget(config) {
 	let { waifuPath, apiPath, cdnPath } = config;
@@ -41,9 +31,10 @@ function loadWidget(config) {
 				<span class="fa fa-lg fa-camera-retro"></span>
 				<span class="fa fa-lg fa-info-circle"></span>
 				<span class="fa fa-lg fa-times"></span>
+                                <span class="fa fa-lg fa-chevron-right" id="live2d-go-right"></span>
+                                <span class="fa fa-lg fa-chevron-left" id="live2d-go-left"></span>
 			</div>
 		</div>`);
-	// 工具栏菜单列表，与实际顺序相同，由于最终会插入到网页中，需用<!--text-->注释
 	// https://stackoverflow.com/questions/24148403/trigger-css-transition-on-appended-element
 	setTimeout(() => {
 		document.getElementById("waifu").style.bottom = 0;
@@ -71,7 +62,16 @@ function loadWidget(config) {
 		}
 	}, 1000);
 
-	window.onload = function registerEventListener() { // 工具栏菜单效果
+        (function () { // 根据位置加载
+                if (localStorage.getItem("Live2DPlace") === "left") {
+                        document.getElementById("live2d-go-left").style.display = "none";
+                } else if (localStorage.getItem("Live2DPlace") === "right") {
+                        document.getElementById("live2d-go-right").style.display = "none";
+                        document.getElementById("live2d_css").href = live2d_path + "waifu_right.css"
+                }
+        })();
+
+	(function registerEventListener() { // 工具栏菜单效果
 		document.querySelector("#waifu-tool .fa-comment").addEventListener("click", showHitokoto); // 一言API对话
 		document.querySelector("#waifu-tool .fa-paper-plane").addEventListener("click", () => { // 飞机大战（雾）
 			if (window.Asteroids) {
@@ -106,16 +106,14 @@ function loadWidget(config) {
 			localStorage.setItem("Live2DPlace", "right");
 			showMessage("耶，可以去右边了呢～。", 2000, 11);
 			document.getElementById("waifu").style.bottom = "-500px";
-			var live2d_rightCSS = "/effect/Live2D/live2d-widget/waifu_right.css/"; // 显示在右边时的CSS
-	                setTimeout('document.getElementById("live2d_css").setAttribute("href",live2d_rightCSS)',3000);
+	                setTimeout('document.getElementById("live2d_css").setAttribute("href",live2d_path + "waifu_right.css")',3000);
                         setTimeout('document.getElementById("waifu").style.bottom = "0px"',3000);
 		});
                 document.querySelector("#waifu-tool .fa-chevron-left").addEventListener("click", () => { // 切换看板娘位置（左 <= 右）
 			localStorage.setItem("Live2DPlace", "left");
 			showMessage("耶，可以去左边了呢～。", 2000, 11);
 			document.getElementById("waifu").style.bottom = "-500px";
-			var live2d_leftCSS = "/effect/Live2D/live2d-widget/waifu_left.css/"; // 显示在左边时的CSS
-			setTimeout('document.getElementById("live2d_css").setAttribute("href",live2d_rightCSS)',3000);
+			setTimeout('document.getElementById("live2d_css").setAttribute("href",live2d_path + "waifu_left.css")',3000);
                         setTimeout('document.getElementById("waifu").style.bottom = "0px"',3000);
 		});
 		const devtools = () => { };
@@ -129,7 +127,7 @@ function loadWidget(config) {
 		window.addEventListener("visibilitychange", () => {
 			if (!document.hidden) showMessage("哇，你终于回来了～", 6000, 9);
 		});
-	};
+	})();
 
 	(function welcomeMessage() {
 		let text;
