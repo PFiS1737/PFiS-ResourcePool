@@ -109,7 +109,7 @@
 	color: #5b6c7d;
 	cursor: pointer;
 	display: block;
-	margin: 7px 0px;
+	margin-bottom: 7px;
 	text-align: center;
 	transition: color .3s;
 }
