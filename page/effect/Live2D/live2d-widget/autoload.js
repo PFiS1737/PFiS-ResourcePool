@@ -28,7 +28,7 @@ function loadExternalResource(url, type) {
 if (screen.width >= 768) {
 	// "768"为最低显示宽度，单位为像素
 	Promise.all([
-		loadExternalResource(live2d_path + "waifu.css", "css"),
+		loadExternalResource(live2d_path + "waifu_left.css", "css"),
 		loadExternalResource(live2d_path + "live2d.min.js", "js"),
 		loadExternalResource(live2d_path + "waifu-tips.js", "js")
 	]).then(() => {
