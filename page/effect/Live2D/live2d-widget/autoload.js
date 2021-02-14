@@ -1,5 +1,4 @@
 // 注意：live2d_path 参数应使用绝对路径
-// const live2d_path = "https://cdn.jsdelivr.net/gh/PFiS1737/PFiS_Public_Repository@latest/live2d/";
 const live2d_path = "/effect/Live2D/live2d-widget/";
 
 // 封装异步加载资源的方法
@@ -44,11 +43,6 @@ if (screen.width >= 768) {
 // initWidget 第一个参数为 waifu-tips.json 的路径，第二个参数为 API 地址
 // API 后端可自行搭建，参考 https://github.com/fghrsh/live2d_api
 // 初始化看板娘会自动加载指定目录下的 waifu-tips.json
-
-// 看板娘位置 
-if (localStorage.getItem("Live2DPlace") === "right") {
-	document.getElementById("live2d_css").setAttribute("href", live2d_path + "waifu_right.css");
-}
 
 console.log(`
   く__,.ヘヽ.        /  ,ー､ 〉
