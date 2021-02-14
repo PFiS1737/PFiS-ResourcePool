@@ -4,11 +4,8 @@
  * https://github.com/PFiS1737/PFiS_Public_Repository/tree/main/live2d
  */
 
-(function Live2DPlace() {
-    if (document.getElementsByName("waifu-tool") === null) {
-        return
-    }
-    if (localStorage.getItem("Live2DPlace") === "left") {
+window.onload = function Live2DPlace() {
+   if (localStorage.getItem("Live2DPlace") === "left") {
         var tag = document.createElement("span");
         tag.setAttribute("class", "fa fa-lg fa-chevron-right");
         document.getElementById("waifu-tool").appendChild(tag);
@@ -17,7 +14,7 @@
         tag.setAttribute("class", "fa fa-lg fa-chevron-left");
         document.getElementById("waifu-tool").appendChild(tag);
     }
-})();
+};
 
 function loadWidget(config) {
 	let { waifuPath, apiPath, cdnPath } = config;
@@ -36,7 +33,7 @@ function loadWidget(config) {
 	document.body.insertAdjacentHTML("beforeend", `<div id="waifu">
 			<div id="waifu-tips"></div>
 			<canvas id="live2d" width="800" height="800"></canvas>
-			<div id="waifu-tool" name="waifu-tool">
+			<div id="waifu-tool" name="waifu-tool" onloud>
 				<span class="fa fa-lg fa-comment"></span>
 				<span class="fa fa-lg fa-paper-plane"></span>
 				<span class="fa fa-lg fa-user-circle"></span>
