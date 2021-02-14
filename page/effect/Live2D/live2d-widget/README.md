@@ -1,13 +1,7 @@
-> 本文件已本地化
-> 可直接引入使用的版本请到[PFiS1737/live2d-widget](https://github.com/PFiS1737/live2d-widget)
-
-> [PFiS1737/live2d-widget](https://github.com/PFiS1737/live2d-widget)未完全完成
-
 # 信息
 > 请遵循原作者的开源及转载协议。  
 
-Copy from [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget).  
-Else API from [米米的博客](https://zhangshuqiao.org).  
+Fork from [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget).  
 # 更多内容请参见
 - [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)及其[Issues](https://github.com/stevenjoezhang/live2d-widget/issues?q=is%3Aissue+is%3Aclosed)
 - [fghrsh/live2d_api](https://github.com/fghrsh/live2d_api)
