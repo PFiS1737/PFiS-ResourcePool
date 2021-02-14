@@ -4,8 +4,6 @@
  * https://github.com/PFiS1737/PFiS_Public_Repository/tree/main/live2d
  */
 
-const live2d_path = "/effect/Live2D/live2d-widget/";
-
 function loadWidget(config) {
 	let { waifuPath, apiPath, cdnPath } = config;
 	let useCDN = false, modelList;
