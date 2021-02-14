@@ -71,7 +71,7 @@ function loadWidget(config) {
 		}
 	}, 1000);
 
-	(function registerEventListener() { // 工具栏菜单效果
+	window.onload = function registerEventListener() { // 工具栏菜单效果
 		document.querySelector("#waifu-tool .fa-comment").addEventListener("click", showHitokoto); // 一言API对话
 		document.querySelector("#waifu-tool .fa-paper-plane").addEventListener("click", () => { // 飞机大战（雾）
 			if (window.Asteroids) {
@@ -129,7 +129,7 @@ function loadWidget(config) {
 		window.addEventListener("visibilitychange", () => {
 			if (!document.hidden) showMessage("哇，你终于回来了～", 6000, 9);
 		});
-	})();
+	};
 
 	(function welcomeMessage() {
 		let text;
