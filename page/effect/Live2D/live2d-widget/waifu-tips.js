@@ -5,7 +5,7 @@
  */
 
 (function Live2DPlace() {
-    if (document.getElementsByName("waifu-tool") !== null) return
+    if (document.getElementsByName("waifu-tool") !== null) {return};
     if (localStorage.getItem("Live2DPlace") === "left") {
         var tag = document.createElement("span");
         tag.setAttribute("class", "fa fa-lg fa-chevron-right");
