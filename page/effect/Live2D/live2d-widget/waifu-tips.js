@@ -4,6 +4,20 @@
  * https://github.com/PFiS1737/PFiS_Public_Repository/tree/main/live2d
  */
 
+(function Live2DPlace() {
+    setTimeout(() => {
+        if (localStorage.getItem("Live2DPlace") === "left") {
+            var tag = document.createElement("span");
+            tag.setAttribute("class", "fa fa-lg fa-chevron-right");
+            document.getElementById("waifu-tool").appendChild(tag);
+        } else if (localStorage.getItem("Live2DPlace") === "right") {
+            var tag = document.createElement("span");
+            tag.setAttribute("class", "fa fa-lg fa-chevron-right");
+            document.getElementById("waifu-tool").appendChild(tag);
+        }
+    },5000);
+})();
+
 function loadWidget(config) {
 	let { waifuPath, apiPath, cdnPath } = config;
 	let useCDN = false, modelList;
@@ -29,15 +43,6 @@ function loadWidget(config) {
 				<span class="fa fa-lg fa-camera-retro"></span>
 				<span class="fa fa-lg fa-info-circle"></span>
 				<span class="fa fa-lg fa-times"></span>
-                                <script>
-                                	(function () {
-                                        	if (localStorage.getItem("Live2DPlace") === "left") {
-                                                	document.write('<span class="fa fa-lg fa-chevron-right"></span>')
-                                                } else if (localStorage.getItem("Live2DPlace") === "right") {
-                                              		document.write('<span class="fa fa-lg fa-chevron-left"></span>')
-                                                }
-                                	})();
-                                </script>
 			</div>
 		</div>`);
 	// 工具栏菜单列表，与实际顺序相同，由于最终会插入到网页中，需用<!--text-->注释
