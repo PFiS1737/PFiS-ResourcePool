@@ -5,7 +5,9 @@
  */
 
 (function Live2DPlace() {
-    if (document.getElementsByName("waifu-tool") === null) {return};
+    if (document.getElementsByName("waifu-tool") === null) {
+        return
+    }
     if (localStorage.getItem("Live2DPlace") === "left") {
         var tag = document.createElement("span");
         tag.setAttribute("class", "fa fa-lg fa-chevron-right");
@@ -91,10 +93,8 @@ function loadWidget(config) {
 			Live2D.captureName = "photo.png"; // 输出照片的名字
 			Live2D.captureFrame = true;
 		});
-		document.querySelector("#waifu-tool .fa-info-circle").addEventListener("click", () => {
-			// 关于页转跳链接
-			// open("https://github.com/stevenjoezhang/live2d-widget");
-			open("https://github.com/PFiS1737/PFiS_Public_Repository/tree/main/live2d");
+		document.querySelector("#waifu-tool .fa-info-circle").addEventListener("click", () => { // 关于页转跳
+			open("https://github.com/PFiS1737/PFiS_Public_Repository/tree/main/page/effect/Live2D/live2d-widget"); //关于页链接
 		});
 		document.querySelector("#waifu-tool .fa-times").addEventListener("click", () => { // 关闭看板娘
 			localStorage.setItem("waifu-display", Date.now());
@@ -105,16 +105,22 @@ function loadWidget(config) {
 				document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
 			}, 3000);
 		});
-		document.querySelector("#waifu-tool .fa-chevron-right").addEventListener("click", () => { // 切换看板娘位置（左 / 右）
-			localStorage.setItem("Live2DPlace", right);
+		document.querySelector("#waifu-tool .fa-chevron-right").addEventListener("click", () => { // 切换看板娘位置（左 => 右）
+			localStorage.setItem("Live2DPlace", "right");
 			showMessage("耶，可以去右边了呢～。", 2000, 11);
 			document.getElementById("waifu").style.bottom = "-500px";
 			var live2d_rightCSS = "/effect/Live2D/live2d-widget/waifu_right.css/"; // 显示在右边时的CSS
-			setTimeout(() => {
-				document.getElementById("live2d_css").setAttribute("href",live2d_rightCSS);
-			}, 3000);
-                        setTimeout('document.getElementById("waifu").style.bottom = "0px"',3000)
-		}); // 到这结束
+	                setTimeout('document.getElementById("live2d_css").setAttribute("href",live2d_rightCSS)',3000);
+                        setTimeout('document.getElementById("waifu").style.bottom = "0px"',3000);
+		});
+                document.querySelector("#waifu-tool .fa-chevron-left").addEventListener("click", () => { // 切换看板娘位置（左 <= 右）
+			localStorage.setItem("Live2DPlace", "left");
+			showMessage("耶，可以去左边了呢～。", 2000, 11);
+			document.getElementById("waifu").style.bottom = "-500px";
+			var live2d_leftCSS = "/effect/Live2D/live2d-widget/waifu_left.css/"; // 显示在左边时的CSS
+			setTimeout('document.getElementById("live2d_css").setAttribute("href",live2d_rightCSS)',3000);
+                        setTimeout('document.getElementById("waifu").style.bottom = "0px"',3000);
+		});
 		const devtools = () => { };
 		console.log("%c", devtools);
 		devtools.toString = () => {
