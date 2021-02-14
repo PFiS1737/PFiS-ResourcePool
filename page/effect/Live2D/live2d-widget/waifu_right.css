@@ -67,16 +67,15 @@
 	transition: opacity .2s;
 }
 
-/* 对话框特殊文字的颜色 */
 #waifu-tips span {
 	color: #0099cc;
 }
 
 #waifu #live2d {
 	cursor: grab;
-	height: 300px; /* 看板娘高 */
+	height: 300px;
 	position: relative;
-	width: 300px; /* 看板娘宽 */
+	width: 300px;
 }
 
 #waifu #live2d:active {
@@ -98,18 +97,36 @@
 }
 
 #waifu-tool span {
-	color: #5b6c7d; /* 工具栏颜色 */
+	color: #5b6c7d;
 	cursor: pointer;
 	display: block;
-	line-height: 30px; /*，工具栏各图标间距 */
+	line-height: 30px;
+	text-align: center;
+	transition: color .3s;
+}
+
+#waifu-tool .fa-chevron-right {
+	color: #5b6c7d;
+	cursor: pointer;
+	display: block;
+	margin: 7px 0px;
+	text-align: center;
+	transition: color .3s;
+}
+
+#waifu-tool .fa-chevron-left {
+	color: #5b6c7d;
+	cursor: pointer;
+	display: block;
+	margin-top: 23px;
 	text-align: center;
 	transition: color .3s;
 }
 
 /* 工具栏触碰后的颜色 */
 #waifu-tool span:hover {
-	color: #0684bd; /* 浅蓝色 */
-	/* color: #34495e; */ /* 深灰色 */
+	color: #0684bd;
+	/* color: #34495e; */
 }
 
 @keyframes shake {
