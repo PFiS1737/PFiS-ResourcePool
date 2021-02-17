@@ -1,3 +1,5 @@
+> 已同步至[PFiS1737/live2d-widget](https://github.com/PFiS1737/live2d-widget). 
+
 # 信息
 > 请遵循原作者的开源及转载协议。  
 
